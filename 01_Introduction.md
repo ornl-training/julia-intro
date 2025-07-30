@@ -88,7 +88,7 @@ This is captured the best by an analogy from [Sam Urmy](https://github.com/ElOce
 > wings? And it should be as easy to build and use as a basic dump truck?
 >
 > <p align="center">
-> ![](https://global.discourse-cdn.com/julialang/original/3X/2/8/2865d34fb35c181dc3c5c0f0b71915f31310269c.jpeg){ width="600" height="400" alt=""}
+> <img src="https://global.discourse-cdn.com/julialang/original/3X/2/8/2865d34fb35c181dc3c5c0f0b71915f31310269c.jpeg" alt="" style="width:50%; height:auto;">
 > </p>
 >
 > There’s a reason that only Lego ever made anything like Dr. Cyber’s Flying
