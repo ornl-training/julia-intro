@@ -53,7 +53,7 @@ julia>
 
 :::::: callout
 
-## implicit promt
+## implicit prompt
 
 Most of the code boxes that follow *do not show the `julia>` prompt*, even
 though it's there in the REPL. Why?
@@ -79,7 +79,7 @@ For further guidance and visual aid, check out the provided [video](https://av.t
 
 ::::::
 
-### Variables
+## Variables
 
 The first thing they try is to perform basic arithmetic operations:
 
@@ -132,7 +132,7 @@ Unicode characters can be entered by a backslash followed by their [LaTeX
 name](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) and then pressing <kbd>tab</kbd> (in this case
 `\alpha`<kbd>tab</kbd>).
 
-### REPL-modes
+## REPL-modes
 
 Unfortunately Melissa can't remember the LaTeX name of ∂ so she copies the character
 , presses <kbd>?</kbd> for help mode,
@@ -165,14 +165,13 @@ Use Julia's help mode to read the documentation for the `varinfo()` function.
 
 ## Solution
 
-
-::::::
-
 If you are not already in help mode, type `?` to enter it. Then write `varinfo` and press enter.
 
-    ```julia
-    ?varinfo
-    ```
+```julia
+?varinfo
+```
+
+::::::
 
 ::::::
 
@@ -213,13 +212,16 @@ shell> cd
 shell> pwd
 ```
 
-::::::
+The working directory is the location from which you launched Julia.  To
+navigate to a different directory, you can use the `cd` command by entering: `cd
+<directory>`. By default, this command will return you to your home directory if
+a specific directory is not given.  If you initially launched Julia from your
+home directory, the working directory remains unchanged, so the output of the
+second `pwd` command will be identical to the first.  Conversely, if you were in
+a different directory when you started Julia, the results of the two `pwd`
+commands will differ.  You can use `cd -` to go back to your previous location.
 
-The working directory is the location from which you launched Julia.
-To navigate to a different directory, you can use the `cd` command by entering: `cd <directory>`. By default, this command will return you to your home directory if a specific directory is not given.
-If you initially launched Julia from your home directory, the working directory remains unchanged, so the output of the second `pwd` command will be identical to the first.
-Conversely, if you were in a different directory when you started Julia, the results of the two `pwd` commands will differ.
-You can use `cd -` to go back to your previous location.
+::::::
 
 ::::::
 
@@ -242,10 +244,10 @@ shell> cd
 shell> ls
 ```
 
-::::::
-
 The first `cd` command will bring you to your home directory.
 `ls` will print a list of the files and directorys in your current location.
+
+::::::
 
 ::::::
 
@@ -253,10 +255,12 @@ The first `cd` command will bring you to your home directory.
 
 ## Hello, `shell>` (`nano` and `cat`)!
 
-Use the shell mode to create a file called `hello.jl` with the nano terminal text editor.
-Inside that file write the simple hello world program `print("Hello World!")`.
+Use the shell mode to create a file called `hello.jl` with the nano terminal
+text editor.  Inside that file write the simple hello world program
+`print("Hello World!")`.
 
-Check the content of the file using `cat hello.jl` and then run the program using `julia hello.jl`.
+Check the content of the file using `cat hello.jl` and then run the program
+using `julia hello.jl`.
 
 :::::: solution
 
@@ -286,7 +290,6 @@ Hello World!
 <kbd>backspace</kbd>
 
 ::::::
-
 
 ::::::
 
