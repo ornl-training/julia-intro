@@ -226,6 +226,8 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#entering-the-repl">Entering the REPL</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#repl-modes">REPL-modes</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -290,7 +292,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Using the REPL</h1>
-        <p>Last updated on 2025-07-30 |
+        <p>Last updated on 2025-08-08 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/02_Using_the_REPL.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -361,6 +363,7 @@ input:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="implicit-promt" class="callout-inner">
 <h3 class="callout-title">implicit promt</h3>
 <div class="callout-content">
@@ -378,6 +381,7 @@ each line of input.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="visual-studio-code" class="callout-inner">
 <h3 class="callout-title">Visual Studio Code</h3>
 <div class="callout-content">
@@ -392,9 +396,8 @@ can be selected as a programming language in new documents.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a></h3>
-<p>The first thing they try is to perform basic arithmetic
+</section><section><h2 class="section-heading" id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a></h2>
+<hr class="half-width"><p>The first thing they try is to perform basic arithmetic
 operations:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -441,7 +444,6 @@ check which variables are defined in the current session by running</p>
  distance             8 bytes Float64
  distance_x_2         8 bytes Float64</code></pre>
 </div>
-</div>
 <div class="section level3">
 <h3 id="unicode">Unicode<a class="anchor" aria-label="anchor" href="#unicode"></a></h3>
 <p>In Julia, Unicode characters are also allowed as variables like
@@ -450,9 +452,8 @@ followed by their <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symb
 name</a> and then pressing <kbd>tab</kbd> (in this case
 <code>\alpha</code><kbd>tab</kbd>).</p>
 </div>
-<div class="section level3">
-<h3 id="repl-modes">REPL-modes<a class="anchor" aria-label="anchor" href="#repl-modes"></a></h3>
-<p>Unfortunately Melissa can’t remember the LaTeX name of ∂ so she
+</section><section><h2 class="section-heading" id="repl-modes">REPL-modes<a class="anchor" aria-label="anchor" href="#repl-modes"></a></h2>
+<hr class="half-width"><p>Unfortunately Melissa can’t remember the LaTeX name of ∂ so she
 copies the character , presses <kbd>?</kbd> for help mode,</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -476,6 +477,7 @@ back to normal mode by pressing <kbd>backspace</kbd>.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="exploring-julias-help-mode" class="callout-inner">
 <h3 class="callout-title">Exploring Julia’s Help Mode</h3>
 <div class="callout-content">
@@ -490,30 +492,15 @@ functions. Use Julia’s help mode to read the documentation for the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-
-</div>
-</div>
-</div>
-</div>
-<div id="exploring-julias-help-mode" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="exploring-julias-help-mode" class="callout-inner">
-<h3 class="callout-title">Exploring Julia’s Help Mode<em>
-(continued)</em>
-</h3>
-<div class="callout-content">
 <p>If you are not already in help mode, type <code>?</code> to enter it.
 Then write <code>varinfo</code> and press enter.</p>
 <div class="codewrapper sourceCode" id="cb13">
-<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">```</span><span class="ex">julia</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="ex">?varinfo</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="kw">```</span></span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>?varinfo</span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -533,6 +520,7 @@ Julia prompt.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="hello-shell-pwd-and-cd" class="callout-inner">
 <h3 class="callout-title">Hello, <code>shell&gt;</code>
 (<code>pwd</code> and <code>cd</code>) !</h3>
@@ -555,7 +543,7 @@ before? Why or why not?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -572,19 +560,6 @@ before? Why or why not?</li>
 </h3>
 <pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>shell<span class="op">&gt;</span> pwd</span></code></pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="hello-shell-pwd-and-cd" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="hello-shell-pwd-and-cd" class="callout-inner">
-<h3 class="callout-title">Hello, <code>shell&gt;</code>
-(<code>pwd</code> and <code>cd</code>) !<em> (continued)</em>
-</h3>
-<div class="callout-content">
 <p>The working directory is the location from which you launched Julia.
 To navigate to a different directory, you can use the <code>cd</code>
 command by entering: <code>cd &lt;directory&gt;</code>. By default, this
@@ -598,10 +573,12 @@ the two <code>pwd</code> commands will differ. You can use
 </div>
 </div>
 </div>
+</div>
 <div id="hello-shell-ls" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="hello-shell-ls" class="callout-inner">
 <h3 class="callout-title">Hello, <code>shell&gt;</code>
 (<code>ls</code>)!</h3>
@@ -616,7 +593,7 @@ files</em>). Use it to show the contents of your home directory.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -628,22 +605,10 @@ files</em>). Use it to show the contents of your home directory.</p>
 </h3>
 <pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>shell<span class="op">&gt;</span> ls</span></code></pre>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div id="hello-shell-ls" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="hello-shell-ls" class="callout-inner">
-<h3 class="callout-title">Hello, <code>shell&gt;</code>
-(<code>ls</code>)!<em> (continued)</em>
-</h3>
-<div class="callout-content">
 <p>The first <code>cd</code> command will bring you to your home
 directory. <code>ls</code> will print a list of the files and directorys
 in your current location.</p>
+</div>
 </div>
 </div>
 </div>
@@ -651,6 +616,7 @@ in your current location.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="hello-shell-nano-and-cat" class="callout-inner">
 <h3 class="callout-title">Hello, <code>shell&gt;</code>
 (<code>nano</code> and <code>cat</code>)!</h3>
@@ -668,7 +634,7 @@ then run the program using <code>julia hello.jl</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -720,8 +686,9 @@ later on:</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div id="keypoints" class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
+<h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul><li>“The REPL reads the given input, evaluates the given expression and
 prints the resulting output to the user.”</li>
@@ -735,7 +702,6 @@ prints the resulting output to the user.”</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01_Introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -772,7 +738,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.12" class="external-link">sandpaper (0.16.12)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.6" class="external-link">varnish (1.0.6)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -793,9 +759,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/02_Using_the_REPL.html",
   "identifier": "https://ornl-training.github.io/julia-intro/02_Using_the_REPL.html",
-  "dateCreated": "2025-07-30",
-  "dateModified": "2025-07-30",
-  "datePublished": "2025-08-05"
+  "dateCreated": "2025-08-08",
+  "dateModified": "2025-08-08",
+  "datePublished": "2025-08-08"
 }
 
   </script><script>
