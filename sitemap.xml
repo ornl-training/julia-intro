@@ -13,6 +13,12 @@
     <loc>https://ornl-training.github.io/julia-intro/02_Using_the_REPL.html</loc>
   </url>
   <url>
+    <loc>https://ornl-training.github.io/julia-intro/03_Julia_type_system.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/04_Using_the_package_manager.html</loc>
+  </url>
+  <url>
     <loc>https://ornl-training.github.io/julia-intro/404.html</loc>
   </url>
   <url>
@@ -41,6 +47,12 @@
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/02_Using_the_REPL.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/03_Julia_type_system.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/04_Using_the_package_manager.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/404.html</loc>
