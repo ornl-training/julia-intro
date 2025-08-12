@@ -53,7 +53,7 @@ julia>
 
 :::::: callout
 
-## implicit promt
+## implicit prompt
 
 Most of the code boxes that follow *do not show the `julia>` prompt*, even
 though it's there in the REPL. Why?

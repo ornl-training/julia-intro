@@ -68,6 +68,8 @@ contact: 'facklerpw@ornl.gov'
 episodes: 
   - 01_Introduction.md
   - 02_Using_the_REPL.md
+  - 03_Julia_type_system.md
+  - 04_Using_the_package_manager.md
 
 # Information for Learners
 learners: 
