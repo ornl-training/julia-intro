@@ -4,6 +4,21 @@
     <loc>https://ornl-training.github.io/julia-intro/01-introduction.html</loc>
   </url>
   <url>
+    <loc>https://ornl-training.github.io/julia-intro/01_00_Intro_to_Julia.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/01_01_Introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/01_02_Using_the_REPL.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/01_03_Julia_type_system.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/01_04_Using_the_package_manager.html</loc>
+  </url>
+  <url>
     <loc>https://ornl-training.github.io/julia-intro/01_Introduction.html</loc>
   </url>
   <url>
@@ -38,6 +53,21 @@
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/01-introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/01_00_Intro_to_Julia.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/01_01_Introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/01_02_Using_the_REPL.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/01_03_Julia_type_system.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/01_04_Using_the_package_manager.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/01_Introduction.html</loc>

@@ -217,7 +217,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01_Introduction.html">1. Introduction</a>
+        <a href="01_00_Intro_to_Julia.html">1. Part I: Introduction to Julia</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -226,7 +226,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02_Using_the_REPL.html">2. Using the REPL</a>
+        <a href="01_01_Introduction.html">2. Introduction</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -235,7 +235,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03_Julia_type_system.html">3. The Julia Type System</a>
+        <a href="01_02_Using_the_REPL.html">3. Using the REPL</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -244,7 +244,16 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04_Using_the_package_manager.html">4. Using the Package Manager</a>
+        <a href="01_03_Julia_type_system.html">4. The Julia Type System</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="01_04_Using_the_package_manager.html">5. Using the Package Manager</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -292,21 +301,42 @@
         <!-- START: inst/pkgdown/templates/content-syllabus.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="01_Introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01_00_Intro_to_Julia.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="01_Introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01_00_Intro_to_Julia.html" rel="next">Next: Part I: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
-Workbench</a>.</p>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Trebuchet_Scheme.svg" alt="Trebuchet" style="width:40%; height:auto;" class="figure"></p>
+<p>Melissa and her schoolmates built a trebuchet in their physics club.
+In their first tests they experienced that aiming it is not that easy
+and intuitive, so they are planning to write a program that
+automatically aims their trebuchet given the distance of the target and
+the velocity of the wind.</p>
+<p>As for the programming language, they chose Julia since it has
+state-of-the-art packages for this task and they also read it composes
+very well. Unfortunately nobody knows this language already, so they
+have to learn it from scratch.</p>
+<div id="prereq1" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<span class="callout-header">Prerequisite</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>Understand the concepts of <strong>files</strong> and
+<strong>directories</strong> as well as <strong>arrays</strong> and
+<strong>indices</strong>.</li>
+<li>It is beneficial to have some programming experience in another
+language.</li>
+<li>This course requires Julia 1.6 or greater</li>
+</ul></div>
+</div>
+</div>
 
 
       <section id="setup"><section><h2 class="section-heading" id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
@@ -334,7 +364,7 @@ any links that you are not going to use.
   Windows
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="section level3 accordion-body">
 <h3 id="git-and-bash">Git and Bash<a class="anchor" aria-label="anchor" href="#git-and-bash"></a></h3>
 <ol style="list-style-type: decimal"><li>Download the <a href="https://gitforwindows.org/" class="external-link">Git for Windows
@@ -459,7 +489,7 @@ appear.</p></li>
   MacOS
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="bash">Bash<a class="anchor" aria-label="anchor" href="#bash"></a></h4>
@@ -555,7 +585,7 @@ appear.</p></li>
   Linux
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="bash-1">Bash<a class="anchor" aria-label="anchor" href="#bash-1"></a></h4>
@@ -631,16 +661,12 @@ appear.</p></li>
 </div>
 </div>
 </div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
-        <a class="chapter-link float-end" href="01_Introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01_00_Intro_to_Julia.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
-        <a class="chapter-link float-end" href="01_Introduction.html" rel="next">Next: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="01_00_Intro_to_Julia.html" rel="next">Next: Part I: Introduction... <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
     </nav></div>
 <!-- END  : inst/pkgdown/templates/content-syllabus.html -->

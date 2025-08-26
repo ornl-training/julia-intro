@@ -243,7 +243,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="01_Introduction.html">1. Introduction</a>
+        <a href="01_00_Intro_to_Julia.html">1. Part I: Introduction to Julia</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -255,7 +255,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="02_Using_the_REPL.html">2. Using the REPL</a>
+        <a href="01_01_Introduction.html">2. Introduction</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -267,7 +267,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="03_Julia_type_system.html">3. The Julia Type System</a>
+        <a href="01_02_Using_the_REPL.html">3. Using the REPL</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -279,7 +279,19 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="04_Using_the_package_manager.html">4. Using the Package Manager</a>
+        <a href="01_03_Julia_type_system.html">4. The Julia Type System</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="01_04_Using_the_package_manager.html">5. Using the Package Manager</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -342,11 +354,49 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-01_Introduction"><p>Content from <a href="01_Introduction.html">Introduction</a></p>
+<section id="aio-01_00_Intro_to_Julia"><p>Content from <a href="01_00_Intro_to_Julia.html">Part I: Introduction to Julia</a></p>
 <hr>
 <p>Last updated on 2025-08-26 |
 
-        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_Introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_00_Intro_to_Julia.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li><a href="01_01_Introduction.html">Introduction</a></li>
+<li><a href="01_02_Using_the_REPL.html">Using the REPL</a></li>
+<li><a href="01_03_Julia_type_system.html">The Julia Type
+System</a></li>
+<li><a href="01_04_Using_the_package_manager.html">Using the Package
+Manager</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Learn the basic infrastructure for programming in Julia</li>
+<li>Learn how to install packages and use them in the Julia REPL</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></section><section id="aio-01_01_Introduction"><p>Content from <a href="01_01_Introduction.html">Introduction</a></p>
+<hr>
+<p>Last updated on 2025-08-26 |
+
+        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_01_Introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -455,17 +505,29 @@ Flying Time Vessel!</p>
 <div class="section level3">
 <h3 id="built-in-engineering">Built-in Engineering<a class="anchor" aria-label="anchor" href="#built-in-engineering"></a>
 </h3>
-<p>Julia has software engineering features integrated into the language.
-- Dependency management - Packaging - Documentation - Testing -
-Profiling</p>
+<p>Julia has software engineering features integrated into the
+language.</p>
+<ul>
+<li>Dependency management</li>
+<li>Packaging</li>
+<li>Documentation</li>
+<li>Testing</li>
+<li>Profiling</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="designed-for-scientists">Designed for Scientists<a class="anchor" aria-label="anchor" href="#designed-for-scientists"></a>
 </h3>
 <p>Julia includes “out-of-the-box” many tools commonly used in
-scientific computing, like - multi-dimensional arrays - linear algebra
-(including sparse arrays) - random numbers - statistics (and, of course,
-many other things through easily-accessible packages).</p>
+scientific computing, like</p>
+<ul>
+<li>multi-dimensional arrays</li>
+<li>linear algebra (including sparse arrays)</li>
+<li>random numbers</li>
+<li>statistics</li>
+</ul>
+<p>(and, of course, many other things through easily-accessible
+packages).</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -474,23 +536,19 @@ many other things through easily-accessible packages).</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>“Julia is a just-in-time compiled language”</li>
-<li>“Julia packages compose well”</li>
-<li>“Designed for science with engineering baked in”</li>
+<li>Julia is a just-in-time compiled language</li>
+<li>Julia packages compose well</li>
+<li>Designed for science with engineering baked in</li>
 </ul>
 </div>
 </div>
 </div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
 </div>
-</section></section><section id="aio-02_Using_the_REPL"><p>Content from <a href="02_Using_the_REPL.html">Using the REPL</a></p>
+</section></section><section id="aio-01_02_Using_the_REPL"><p>Content from <a href="01_02_Using_the_REPL.html">Using the REPL</a></p>
 <hr>
 <p>Last updated on 2025-08-26 |
 
-        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/02_Using_the_REPL.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_02_Using_the_REPL.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -531,19 +589,16 @@ any links that you are not going to use.
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">julia</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>               <span class="ex">_</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>   <span class="ex">_</span>       _ _<span class="er">(</span><span class="ex">_</span><span class="kw">)</span><span class="ex">_</span>     <span class="kw">|</span>  <span class="ex">Documentation:</span> https://docs.julialang.org</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">_</span><span class="kw">)</span>     <span class="kw">|</span> <span class="kw">(</span><span class="ex">_</span><span class="kw">)</span> <span class="kw">(</span><span class="ex">_</span><span class="kw">)</span>    <span class="kw">|</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>   <span class="ex">_</span> _   _<span class="kw">|</span> <span class="kw">|</span><span class="ex">_</span>  __ _   <span class="kw">|</span>  <span class="ex">Type</span> <span class="st">"?"</span> for help, <span class="st">"]?"</span> for Pkg help.</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span><span class="ex">/</span> _<span class="kw">`</span> <span class="kw">|</span>  <span class="kw">|</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span><span class="ex">_</span><span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">|</span> <span class="kw">(</span><span class="ex">_</span><span class="kw">|</span> <span class="kw">|</span>  <span class="kw">|</span>  <span class="ex">Version</span> 1.7.2 <span class="er">(</span><span class="ex">2022-02-06</span><span class="kw">)</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a> <span class="ex">_/</span> <span class="kw">|</span><span class="ex">\__</span><span class="st">'_|_|_|\__'</span><span class="ex">_</span><span class="kw">|</span>  <span class="kw">|</span>  <span class="ex">Official</span> https://julialang.org/ release</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="kw">|</span><span class="ex">__/</span>                   <span class="kw">|</span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="ex">julia</span><span class="op">&gt;</span></span></code></pre>
-</div>
+<pre><code>               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.11.6 (2025-07-09)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia&gt;</code></pre>
 <p>This is the so-called REPL, which stands for
 <strong>r</strong>ead-<strong>e</strong>valuate-<strong>p</strong>rint-<strong>l</strong>oop.
 The interactive command-line REPL allows quick and easy execution of
@@ -893,24 +948,20 @@ later on:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>“The REPL reads the given input, evaluates the given expression and
-prints the resulting output to the user.”</li>
-<li>“Pressing <kbd>?</kbd> enters help mode.”</li>
-<li>“Pressing <kbd>;</kbd> enters shell mode.”</li>
-<li>“Pressing <kbd>]</kbd> enters pkg mode.”</li>
+<li>The REPL reads the given input, evaluates the given expression and
+prints the resulting output to the user.</li>
+<li>Pressing <kbd>?</kbd> enters help mode.</li>
+<li>Pressing <kbd>;</kbd> enters shell mode.</li>
+<li>Pressing <kbd>]</kbd> enters pkg mode.</li>
 </ul>
 </div>
 </div>
 </div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-03_Julia_type_system"><p>Content from <a href="03_Julia_type_system.html">The Julia Type System</a></p>
+</section></section><section id="aio-01_03_Julia_type_system"><p>Content from <a href="01_03_Julia_type_system.html">The Julia Type System</a></p>
 <hr>
 <p>Last updated on 2025-08-26 |
 
-        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/03_Julia_type_system.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_03_Julia_type_system.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1211,20 +1262,16 @@ later.</em></p>
 <h3 class="callout-title">Keypoints</h3>
 <div class="callout-content">
 <ul>
-<li>“In Julia types have only one direct supertype.”</li>
+<li>In Julia types have only one direct supertype.</li>
 </ul>
 </div>
 </div>
 </div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</section></section><section id="aio-04_Using_the_package_manager"><p>Content from <a href="04_Using_the_package_manager.html">Using the Package Manager</a></p>
+</section></section><section id="aio-01_04_Using_the_package_manager"><p>Content from <a href="01_04_Using_the_package_manager.html">Using the Package Manager</a></p>
 <hr>
 <p>Last updated on 2025-08-26 |
 
-        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/04_Using_the_package_manager.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_04_Using_the_package_manager.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1451,17 +1498,14 @@ upon <code>import</code> using the keyword <em><code>as</code></em>:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>“Find packages on JuliaHub”</li>
-<li>“add packages using <code>pkg&gt; add</code>”</li>
-<li>“use many small environments rather than one big environment”</li>
+<li>Find packages on JuliaHub</li>
+<li>add packages using <code>pkg&gt; add</code>
+</li>
+<li>use many small environments rather than one big environment</li>
 </ul>
 </div>
 </div>
 </div>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
 </div>
 </section></section>
 </div>
