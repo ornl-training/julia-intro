@@ -4,14 +4,10 @@ teaching: 0
 exercises: 0
 ---
 
-:::::: objectives
-
 ## Objectives
 
 - Learn the basic infrastructure for programming in Julia
 - Learn how to install packages and use them in the Julia REPL
-
-::::::
 
 ## Episodes
 
