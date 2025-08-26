@@ -49,6 +49,7 @@ variable.
 ## Why Julia?
 
 ### Just-in-Time (JIT) Compilation
+
 Julia is a programming language that superficially looks like an interpreted
 language and mostly behaves like one.  But before each function is executed it
 will be compiled *just in time*.
@@ -58,6 +59,7 @@ of a compiled language at the cost of waiting a bit longer for the first
 execution of any function.
 
 ### Package Composition
+
 There is another aspect of Julia that makes it interesting and that is the way
 packages compose.  This is captured the best by an analogy from [Sam
 Urmy](https://github.com/ElOceanografo):
@@ -99,7 +101,9 @@ Urmy](https://github.com/ElOceanografo):
 Originally posted on [Discourse](https://discourse.julialang.org/t/what-is-the-advantage-of-julia-over-fortran/65964/101).
 
 ### Built-in Engineering
+
 Julia has software engineering features integrated into the language.
+
 - Dependency management
 - Packaging
 - Documentation
@@ -107,19 +111,22 @@ Julia has software engineering features integrated into the language.
 - Profiling
 
 ### Designed for Scientists
+
 Julia includes "out-of-the-box" many tools commonly used in scientific
 computing, like
+
 - multi-dimensional arrays
 - linear algebra (including sparse arrays)
 - random numbers
 - statistics
+
 (and, of course, many other things through easily-accessible packages).
 
 :::::: keypoints
 
-  - "Julia is a just-in-time compiled language"
-  - "Julia packages compose well"
-  - "Designed for science with engineering baked in"
+  - Julia is a just-in-time compiled language
+  - Julia packages compose well
+  - Designed for science with engineering baked in
 
 ::::::
 

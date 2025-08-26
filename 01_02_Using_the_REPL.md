@@ -29,15 +29,16 @@ Melissa and her classmates open a terminal and launch `julia`:
 julia
 ```
 
-```bash
+```
                _
    _       _ _(_)_     |  Documentation: https://docs.julialang.org
   (_)     | (_) (_)    |
    _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
   | | | | | | |/ _` |  |
-  | | |_| | | | (_| |  |  Version 1.7.2 (2022-02-06)
+  | | |_| | | | (_| |  |  Version 1.11.6 (2025-07-09)
  _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
 |__/                   |
+
 julia>
 ```
 
@@ -309,10 +310,11 @@ To exit *shell*, *help* or *pkg* mode, hit <kbd>backspace</kbd>.
 
 :::::: keypoints
 
-  - "The REPL reads the given input, evaluates the given expression and prints the resulting output to the user."
-  - "Pressing <kbd>?</kbd> enters help mode."
-  - "Pressing <kbd>;</kbd> enters shell mode."
-  - "Pressing <kbd>]</kbd> enters pkg mode."
+  - The REPL reads the given input, evaluates the given expression and prints
+    the resulting output to the user.
+  - Pressing <kbd>?</kbd> enters help mode.
+  - Pressing <kbd>;</kbd> enters shell mode.
+  - Pressing <kbd>]</kbd> enters pkg mode.
 
 ::::::
 
