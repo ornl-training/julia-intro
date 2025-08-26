@@ -151,13 +151,13 @@ on "How to change your default shell".
 
 **For macOS**, install Git for Mac by downloading and running the most recent
 "mavericks" installer from [this
-list](http://sourceforge.net/projects/git-osx-installer/files/).  Because this
+list](https://sourceforge.net/projects/git-osx-installer/files/).  Because this
 installer is not signed by the developer, you may have to right click (control
 click) on the .pkg file, click Open, and click Open on the pop up window.  After
 installing Git, there will not be anything in your `/Applications` folder, as
 Git is a command line program.  **For older versions of OS X (10.5-10.8)** use
 the most recent available installer labelled "snow-leopard" [available
-here](http://sourceforge.net/projects/git-osx-installer/files/).
+here](https://sourceforge.net/projects/git-osx-installer/files/).
 
 #### Nano
 
