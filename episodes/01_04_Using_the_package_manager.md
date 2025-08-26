@@ -193,8 +193,8 @@ import Trebuchet as Trebuchets
 
 :::::: keypoints
 
-  - "Find packages on JuliaHub"
-  - "add packages using `pkg> add`"
-  - "use many small environments rather than one big environment"
+  - Find packages on JuliaHub
+  - add packages using `pkg> add`
+  - use many small environments rather than one big environment
 
 ::::::

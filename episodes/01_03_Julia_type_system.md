@@ -260,7 +260,7 @@ It is necessary to restart the REPL to define the new definition of
 
 ## Keypoints
 
-  - "In Julia types have only one direct supertype."
+  - In Julia types have only one direct supertype.
 
 ::::::
 

@@ -66,10 +66,11 @@ contact: 'facklerpw@ornl.gov'
 
 # Order of episodes in your lesson
 episodes: 
-  - 01_Introduction.md
-  - 02_Using_the_REPL.md
-  - 03_Julia_type_system.md
-  - 04_Using_the_package_manager.md
+  - 01_00_Intro_to_Julia.md
+  - 01_01_Introduction.md
+  - 01_02_Using_the_REPL.md
+  - 01_03_Julia_type_system.md
+  - 01_04_Using_the_package_manager.md
 
 # Information for Learners
 learners: 
