@@ -29,7 +29,7 @@ Melissa and her classmates open a terminal and launch `julia`:
 julia
 ```
 
-```julia
+```bash
                _
    _       _ _(_)_     |  Documentation: https://docs.julialang.org
   (_)     | (_) (_)    |
@@ -68,14 +68,15 @@ assume that any **Julia** box prepends the prompt on each line of input.
 
 ## Visual Studio Code
 
-An alternative to using the REPL through a terminal is
-to work with <b>V</b>isual <b>S</b>tudio <b>C</b>ode or its open source altenative VSCodium.
-VSC is a source code editor for which a `julia` extension is available.
-After installing the application, simply click on the <kbd>"Extension"</kbd> symbol on the left side and
-search for `julia`.
-Once installt `julia` remains usable and can be selected as a programming language in new documents.
+An alternative to using the REPL through a terminal is to work with
+<b>V</b>isual <b>S</b>tudio <b>C</b>ode or its open source altenative VSCodium.
+VSC is a source code editor for which a `julia` extension is available.  After
+installing the application, simply click on the <kbd>"Extension"</kbd> symbol on
+the left side and search for `julia`.  Once installt `julia` remains usable and
+can be selected as a programming language in new documents.
 
-For further guidance and visual aid, check out the provided [video](https://av.tib.eu/media/62060)!
+For further guidance and visual aid, check out the provided
+[video](https://av.tib.eu/media/62060)!
 
 ::::::
 
@@ -83,27 +84,27 @@ For further guidance and visual aid, check out the provided [video](https://av.t
 
 The first thing they try is to perform basic arithmetic operations:
 
-````julia
+```julia
 1 + 4 * 7.3
-````
+```
 
-````output
+```output
 30.2
-````
+```
 
 That works as expected.
 It is also possible to bind a name to a value via the assignment operator `=`,
 which makes it easier to refer to the value later on.
 These names are called *variables*.
 
-````julia
+```julia
 distance = 30.2
 distance_x_2 = 2 * distance
-````
+```
 
-````output
+```output
 60.4
-````
+```
 
 Melissa notices that assignment also returns the value.
 She can also check which variables are defined in the current session by
@@ -307,8 +308,6 @@ pkg>
 To exit *shell*, *help* or *pkg* mode, hit <kbd>backspace</kbd>.
 
 :::::: keypoints
-
-## Keypoints
 
   - "The REPL reads the given input, evaluates the given expression and prints the resulting output to the user."
   - "Pressing <kbd>?</kbd> enters help mode."

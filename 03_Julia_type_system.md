@@ -42,7 +42,7 @@ Since Melissa wants to change the parameters of the trebuchet, she uses a
 But she cannot influence the environment and thus uses a `struct` for those
 values.
 
-````julia
+```julia
 mutable struct Trebuchet
   counterweight::Float64
   release_angle::Float64
@@ -52,7 +52,7 @@ struct Environment
   wind::Float64
   target_distance::Float64
 end
-````
+```
 
 ## Types and hierarchy
 
@@ -67,71 +67,71 @@ are between `Float64` and `Any`:
 
 **1.**
 
-````julia
+```julia
 supertype(Float64)
-````
+```
 
-````output
+```output
 AbstractFloat
-````
+```
 
 **2.**
 
-````julia
+```julia
 supertype(AbstractFloat)
-````
+```
 
-````output
+```output
 Real
-````
+```
 
 **3.**
 
-````julia
+```julia
 supertype(Real)
-````
+```
 
-````output
+```output
 Number
-````
+```
 
 **4.**
 
-````julia
+```julia
 supertype(Number)
-````
+```
 
-````output
+```output
 Any
-````
+```
 
 So we have the relationship `Float64 <: AbstractFloat <: Real <: Number <: Any`
-where [__`<:`__ is the *subtype operator*](https://docs.julialang.org/en/v1/base/base/#Core.:%3C:), used here to mean the item
-on the left "is a subtype of" the item on the right.
+where [__`<:`__ is the *subtype
+operator*](https://docs.julialang.org/en/v1/base/base/#Core.:%3C:), used here to
+mean the item on the left "is a subtype of" the item on the right.
 
-`Float64` is a _concrete_ type, which means that you can actually create
-objects of this type.
-For example `1.0` is an object of type `Float64`.
-We can check this at the REPL using either (or both) the
-`typeof` function or the [`isa` operator](https://docs.julialang.org/en/v1/base/base/#Core.isa):
+`Float64` is a _concrete_ type, which means that you can actually create objects
+of this type.  For example `1.0` is an object of type `Float64`.  We can check
+this at the REPL using either (or both) the `typeof` function or the [`isa`
+operator](https://docs.julialang.org/en/v1/base/base/#Core.isa):
 
-````julia
+```julia
 typeof(1.0)
-````
+```
 
-````output
+```output
 Float64
-````
+```
 
 or
 
-````julia
+```julia
 1.0 isa Float64
-````
+```
 
-````output
+```output
 true
-````
+```
 
 All the other types are _abstract_ types that are used to address groups of
 types.
@@ -140,22 +140,22 @@ value that is a subtype of `Real`.
 
 Let's quickly check what are all the subtypes of `Real`:
 
-````julia
+```julia
 subtypes(Real)
-````
+```
 
-````output
+```output
 4-element Vector{Any}:
  AbstractFloat
  AbstractIrrational
  Integer
  Rational
-````
+```
 
 This way the types form a tree with abstract types on the nodes and concrete
 types as leaves.
 Have a look at this visualization of all subtypes of `Number`:
-![Type_tree-Number](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png){alt=""}
+![Type_tree-Number](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png)
 
 :::::: challenge
 
@@ -191,23 +191,23 @@ So far Melissa only defined the layout of her new types `Trebuchet` and
 called _constructor_, which is a function with the same name as the
 corresponding type and as many arguments as there are fields.
 
-````julia
+```julia
 trebuchet = Trebuchet(500, 0.25pi)
-````
+```
 
-````output
+```output
 Trebuchet(500.0, 0.7853981633974483)
-````
+```
 
 Note, how the values will get converted to the specified field type.
 
-````julia
+```julia
 environment = Environment(5, 100)
-````
+```
 
-````output
+```output
 Environment(5.0, 100.0)
-````
+```
 
 `trebuchet` is being called an _instance_ or _object_ of the type `Trebuchet`.
 There can only ever be one definition of the type `Trebuchet` but you can create

@@ -24,15 +24,15 @@ exercises: 0
 
 ::::::
 
-## The package manager
+## The Package Manager
 
 :::::: callout
 
-## The package Manager
+## The package manager
 
 This chapter focuses on the package mode available within the REPL.
 
-A different aproach would be using the <kbd>Pkg</kbd> notation.
+A different approach would be using the `Pkg` package in regular Julia code.
 
 ```julia
 using Pkg
@@ -42,14 +42,13 @@ Pkg.add("Example")
 If you prefer to use that method and want to know more, remember how to get
 [help](02_Getting_started.md).
 
-_(for exp. <kbd>?Pkg.add</kbd>)_
+(_e.g._, `?Pkg.add`)
 
 ::::::
 
 Now it is time for Melissa and their mates to simulate the launch of the
-trebuchet.
-The necessary equations are really complicated, but an investigation on
-[JuliaHub](https://juliahub.com/) revealed that someone already implemented
+trebuchet.  The necessary equations are really complicated, but an investigation
+on [JuliaHub](https://juliahub.com/) revealed that someone already implemented
 these and published it as the Julia package
 [`Trebuchet.jl`](https://juliahub.com/ui/Search?q=trebuchet&type=packages).
 That saves some real work.
@@ -69,8 +68,8 @@ that this is the global environment that is activated by default.
 
 However, she doesn't want to clutter the global environment when working on her
 project.  The default global environment is indicated with `(@v1.x)` before the
-`pkg>` prompt, where `x` is the minor version number of julia, so on julia 1.7
-it will look like `(@v1.7)`.  To create a new environment she uses the
+`pkg>` prompt, where `x` is the minor version number of julia, so on julia 1.11
+it will look like `(@v1.11)`.  To create a new environment she uses the
 `activate` function of the package manager:
 
 ```julia
@@ -78,9 +77,9 @@ it will look like `(@v1.7)`.  To create a new environment she uses the
 ```
 
 
-````
+```output
   Activating project at `~/projects/trebuchet`
-````
+```
 
 In this environment she adds the `Trebuchet` package from its
 open source code [repository on GitHub](https://github.com/FluxML/Trebuchet.jl)
@@ -95,12 +94,12 @@ Melissa quickly recognizes that far more packages are being installed than just
 
 ```output
 [...]
-Updating `[...]/projects/trebuchet/Project.toml`
-  [98b73d46] + Trebuchet v0.2.1
+  Updating `[...]/projects/trebuchet/Project.toml`
+[98b73d46] + Trebuchet v#.#.#
   Updating `[...]/projects/trebuchet/Manifest.toml`
-  [1520ce14] + AbstractTrees v0.3.3
-  [79e6a3ab] + Adapt v1.1.0
-  [...]
+[1520ce14] + AbstractTrees v#.#.#
+[79e6a3ab] + Adapt v#.#.#
+[...]
 ```
 
 she sees that two files were created: `Project.toml` and `Manifest.toml`.
@@ -119,13 +118,13 @@ environment.
 ```
 
 
-````
+```output
 Status `~/projects/trebuchet/Project.toml`
   [f6369f11] ForwardDiff v0.10.38
   [295af30f] Revise v3.6.3
   [98b73d46] Trebuchet v0.2.2
 
-````
+```
 
 :::::: callout
 
@@ -188,17 +187,14 @@ also named `Trebuchet`.  Now she would get an error if she tried to
 `import`/`using` it directly.  One solution is to assign a nickname or alias to
 the package upon `import` using the keyword *`as`*:
 
-````julia
+```julia
 import Trebuchet as Trebuchets
-````
+```
 
 :::::: keypoints
-
-## Keypoints
 
   - "Find packages on JuliaHub"
   - "add packages using `pkg> add`"
   - "use many small environments rather than one big environment"
 
 ::::::
-
