@@ -362,13 +362,9 @@
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
+<section><h2 class="section-heading" id="episodes">Episodes<a class="anchor" aria-label="anchor" href="#episodes"></a>
+</h2>
+<hr class="half-width">
 <ul>
 <li><a href="01_01_Introduction.html">Introduction</a></li>
 <li><a href="01_02_Using_the_REPL.html">Using the REPL</a></li>
@@ -376,23 +372,7 @@
 System</a></li>
 <li><a href="01_04_Using_the_package_manager.html">Using the Package
 Manager</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Learn the basic infrastructure for programming in Julia</li>
-<li>Learn how to install packages and use them in the Julia REPL</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div></section><section id="aio-01_01_Introduction"><p>Content from <a href="01_01_Introduction.html">Introduction</a></p>
+</ul></section></section><section id="aio-01_01_Introduction"><p>Content from <a href="01_01_Introduction.html">Introduction</a></p>
 <hr>
 <p>Last updated on 2025-08-26 |
 
@@ -748,7 +728,7 @@ functions. Use Julia’s help mode to read the documentation for the
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>If you are not already in help mode, type <code>?</code> to enter it.
 Then write <code>varinfo</code> and press enter.</p>
@@ -801,7 +781,7 @@ before? Why or why not?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -851,7 +831,7 @@ files</em>). Use it to show the contents of your home directory.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -892,7 +872,7 @@ then run the program using <code>julia hello.jl</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1165,7 +1145,7 @@ return <code>false</code>?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The correct answer is 4: while <code>1</code> is an integer,
 <code>1.0</code> is a floating-point value.</p>
@@ -1332,7 +1312,7 @@ regular Julia code.</p>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">add</span>(<span class="st">"Example"</span>)</span></code></pre>
 </div>
 <p>If you prefer to use that method and want to know more, remember how
-to get <a href="01_02_Getting_started.html">help</a>.</p>
+to get <a href="01_02_Using_the_REPL.html">help</a>.</p>
 <p>(<em>e.g.</em>, <code>?Pkg.add</code>)</p>
 </div>
 </div>
