@@ -309,7 +309,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2025-07-30 |
+        <p>Last updated on 2025-08-26 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_Introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -370,12 +370,17 @@ prominently, compiled languages need an explicit type declaration for
 each variable.</p>
 </div>
 </section><section><h2 class="section-heading" id="why-julia">Why Julia?<a class="anchor" aria-label="anchor" href="#why-julia"></a></h2>
-<hr class="half-width"><p>Julia is a programming language that superficially looks like an
+<hr class="half-width"><div class="section level3">
+<h3 id="just-in-time-jit-compilation">Just-in-Time (JIT) Compilation<a class="anchor" aria-label="anchor" href="#just-in-time-jit-compilation"></a></h3>
+<p>Julia is a programming language that superficially looks like an
 interpreted language and mostly behaves like one. But before each
 function is executed it will be compiled <em>just in time</em>.</p>
 <p>Thus you get the flexibility of an interpreted language and the
 execution speed of a compiled language at the cost of waiting a bit
 longer for the first execution of any function.</p>
+</div>
+<div class="section level3">
+<h3 id="package-composition">Package Composition<a class="anchor" aria-label="anchor" href="#package-composition"></a></h3>
 <p>There is another aspect of Julia that makes it interesting and that
 is the way packages compose. This is captured the best by an analogy
 from <a href="https://github.com/ElOceanografo" class="external-link">Sam Urmy</a>:</p>
@@ -408,16 +413,29 @@ as a basic dump truck?</p>
 Flying Time Vessel!</p>
 </blockquote>
 <p>Originally posted on <a href="https://discourse.julialang.org/t/what-is-the-advantage-of-julia-over-fortran/65964/101" class="external-link">Discourse</a>.</p>
-<div id="keypoints" class="callout keypoints">
+</div>
+<div class="section level3">
+<h3 id="built-in-engineering">Built-in Engineering<a class="anchor" aria-label="anchor" href="#built-in-engineering"></a></h3>
+<p>Julia has software engineering features integrated into the language.
+- Dependency management - Packaging - Documentation - Testing -
+Profiling</p>
+</div>
+<div class="section level3">
+<h3 id="designed-for-scientists">Designed for Scientists<a class="anchor" aria-label="anchor" href="#designed-for-scientists"></a></h3>
+<p>Julia includes “out-of-the-box” many tools commonly used in
+scientific computing, like - multi-dimensional arrays - linear algebra
+(including sparse arrays) - random numbers - statistics (and, of course,
+many other things through easily-accessible packages).</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <span class="callout-header">Key Points</span>
-<div id="keypoints" class="callout-inner">
-<h3 class="callout-title">Keypoints</h3>
+<div class="callout-inner">
 <div class="callout-content">
 <ul><li>“Julia is a just-in-time compiled language”</li>
 <li>“Julia packages compose well”</li>
+<li>“Designed for science with engineering baked in”</li>
 </ul></div>
 </div>
 </div>
@@ -425,6 +443,7 @@ Flying Time Vessel!</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -482,8 +501,8 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/instructor/01_Introduction.html",
   "identifier": "https://ornl-training.github.io/julia-intro/instructor/01_Introduction.html",
-  "dateCreated": "2025-08-12",
-  "dateModified": "2025-07-30",
+  "dateCreated": "2025-08-26",
+  "dateModified": "2025-08-26",
   "datePublished": "2025-08-26"
 }
 
