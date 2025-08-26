@@ -155,7 +155,7 @@ subtypes(Real)
 This way the types form a tree with abstract types on the nodes and concrete
 types as leaves.
 Have a look at this visualization of all subtypes of `Number`:
-![Type_tree-Number](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png)
+![Type_tree-Number](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png){alt='Subtypes of Number'}
 
 :::::: challenge
 
@@ -241,7 +241,7 @@ Stacktrace:
 This error message is clear: you're not allowed to define a `struct`
 using a name that's already in use.
 
-:::::: warning
+:::::: caution
 
 ## Restart the REPL
 
@@ -251,14 +251,11 @@ It is necessary to restart the REPL to define the new definition of
 
 ::::::
 
-
 ::::::
 
 *Melissa decides to keep going and come back to this later.*
 
 :::::: keypoints
-
-## Keypoints
 
   - In Julia types have only one direct supertype.
 

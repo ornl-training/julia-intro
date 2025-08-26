@@ -40,7 +40,7 @@ Pkg.add("Example")
 ```
 
 If you prefer to use that method and want to know more, remember how to get
-[help](02_Getting_started.md).
+[help](01_02_Using_the_REPL.md).
 
 (_e.g._, `?Pkg.add`)
 
