@@ -491,7 +491,7 @@ of <code>Real</code>.</p>
 </div>
 <p>This way the types form a tree with abstract types on the nodes and
 concrete types as leaves. Have a look at this visualization of all
-subtypes of <code>Number</code>: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png" alt="Type_tree-Number" class="figure"></p>
+subtypes of <code>Number</code>: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Type-hierarchy-for-julia-numbers.png/1200px-Type-hierarchy-for-julia-numbers.png" alt="Subtypes of Number" class="figure"></p>
 <div id="is-it-real" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -592,8 +592,14 @@ Stacktrace:
 </div>
 <p>This error message is clear: you’re not allowed to define a
 <code>struct</code> using a name that’s already in use.</p>
-<div class="section level2 warning">
-<h2 id="restart-the-repl">Restart the REPL<a class="anchor" aria-label="anchor" href="#restart-the-repl"></a></h2>
+<div id="restart-the-repl" class="callout caution">
+<div class="callout-square">
+<i class="callout-icon" data-feather="alert-triangle"></i>
+</div>
+<span class="callout-header">Caution</span>
+<div id="restart-the-repl" class="callout-inner">
+<h3 class="callout-title">Restart the REPL</h3>
+<div class="callout-content">
 <p>In Julia it is not very easy to redefine <code>struct</code>s. It is
 necessary to restart the REPL to define the new definition of
 <code>Trebuchet</code>, or take a different name instead.</p>
@@ -601,15 +607,16 @@ necessary to restart the REPL to define the new definition of
 </div>
 </div>
 </div>
+</div>
+</div>
 <p><em>Melissa decides to keep going and come back to this
 later.</em></p>
-<div id="keypoints" class="callout keypoints">
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <span class="callout-header">Key Points</span>
-<div id="keypoints" class="callout-inner">
-<h3 class="callout-title">Keypoints</h3>
+<div class="callout-inner">
 <div class="callout-content">
 <ul><li>In Julia types have only one direct supertype.</li>
 </ul></div>
