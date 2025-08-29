@@ -256,11 +256,21 @@ supertypes(Vector{Float64})
 
 ## Type constraints
 
-You can see two "dimensions" of abstraction here. Remember abstract types
-represent "groups" of types that are intuitively similar. This is useful when
-defining structures or functions that need to be generic. When you need your
-function to apply to a group of possible input types, you simply think in terms
-of how tight the constraint needs to be.
+You can see two "dimensions" of abstraction here, the hierarchy and the
+parameter. Remember abstract types represent "groups" of types that are
+intuitively similar. This is useful when defining structures or functions that
+need to be generic. When you need your function to apply to a group of possible
+input types, you simply think in terms of how tight the constraint needs to be.
+
+:::::
+
+::::: caution
+
+## Don't change a variable's type
+
+While a variable that is specified to be an abstract type can change types
+within that constraint, it is best to avoid changing the type of a local
+variable, especially in places that are performance-critical.
 
 :::::
 
