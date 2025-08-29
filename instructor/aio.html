@@ -383,7 +383,7 @@ System</a></li>
 Manager</a></li>
 </ul></section></section><section id="aio-01_01_Introduction"><p>Content from <a href="01_01_Introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2025-08-26 |
+<p>Last updated on 2025-08-29 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_01_Introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 5 minutes</p>
@@ -398,8 +398,8 @@ Manager</a></li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>“What is Julia?”</li>
-<li>“Why use Julia?”</li>
+<li>What is Julia?</li>
+<li>Why use Julia?</li>
 </ul>
 </div>
 </div>
@@ -409,10 +409,10 @@ Manager</a></li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>“Explain the difference between interpreted and compiled programming
-languages”</li>
-<li>“Compare how composing works in Julia and some common programming
-languages”</li>
+<li>Explain the difference between interpreted and compiled programming
+languages</li>
+<li>Compare how composing works in Julia and some common programming
+languages</li>
 </ul>
 </div>
 </div>
@@ -457,6 +457,32 @@ execution speed of a compiled language at the cost of waiting a bit
 longer for the first execution of any function.</p>
 </div>
 <div class="section level3">
+<h3 id="built-in-engineering">Built-in Engineering<a class="anchor" aria-label="anchor" href="#built-in-engineering"></a>
+</h3>
+<p>Julia has software engineering features integrated into the
+language.</p>
+<ul>
+<li>dependency management</li>
+<li>packaging</li>
+<li>documentation</li>
+<li>testing</li>
+<li>profiling</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="designed-for-scientists">Designed for Scientists<a class="anchor" aria-label="anchor" href="#designed-for-scientists"></a>
+</h3>
+<p>Julia includes many tools commonly used in scientific computing.</p>
+<ul>
+<li>multi-dimensional arrays</li>
+<li>linear algebra (including sparse arrays)</li>
+<li>random numbers</li>
+<li>statistics</li>
+</ul>
+<p>(and, of course, many other things through easily-accessible
+packages).</p>
+</div>
+<div class="section level3">
 <h3 id="package-composition">Package Composition<a class="anchor" aria-label="anchor" href="#package-composition"></a>
 </h3>
 <p>There is another aspect of Julia that makes it interesting and that
@@ -491,33 +517,6 @@ as a basic dump truck?</p>
 Flying Time Vessel!</p>
 </blockquote>
 <p>Originally posted on <a href="https://discourse.julialang.org/t/what-is-the-advantage-of-julia-over-fortran/65964/101" class="external-link">Discourse</a>.</p>
-</div>
-<div class="section level3">
-<h3 id="built-in-engineering">Built-in Engineering<a class="anchor" aria-label="anchor" href="#built-in-engineering"></a>
-</h3>
-<p>Julia has software engineering features integrated into the
-language.</p>
-<ul>
-<li>Dependency management</li>
-<li>Packaging</li>
-<li>Documentation</li>
-<li>Testing</li>
-<li>Profiling</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="designed-for-scientists">Designed for Scientists<a class="anchor" aria-label="anchor" href="#designed-for-scientists"></a>
-</h3>
-<p>Julia includes “out-of-the-box” many tools commonly used in
-scientific computing, like</p>
-<ul>
-<li>multi-dimensional arrays</li>
-<li>linear algebra (including sparse arrays)</li>
-<li>random numbers</li>
-<li>statistics</li>
-</ul>
-<p>(and, of course, many other things through easily-accessible
-packages).</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -528,7 +527,7 @@ packages).</p>
 <ul>
 <li>Julia is a just-in-time compiled language</li>
 <li>Julia packages compose well</li>
-<li>Designed for science with engineering baked in</li>
+<li>Designed for science and engineering</li>
 </ul>
 </div>
 </div>
@@ -536,10 +535,10 @@ packages).</p>
 </div>
 </section></section><section id="aio-01_02_Using_the_REPL"><p>Content from <a href="01_02_Using_the_REPL.html">Using the REPL</a></p>
 <hr>
-<p>Last updated on 2025-08-26 |
+<p>Last updated on 2025-08-29 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_02_Using_the_REPL.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 25 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -551,7 +550,7 @@ packages).</p>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>“How to use the REPL?”</li>
+<li>How to use the REPL?</li>
 </ul>
 </div>
 </div>
@@ -561,9 +560,9 @@ packages).</p>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>“Explore basic functionality of input.”</li>
-<li>“Learn how to declare variables.”</li>
-<li>“Learn about REPL modes.”</li>
+<li>Explore basic functionality of input.</li>
+<li>Learn how to declare variables.</li>
+<li>Learn about REPL modes.</li>
 </ul>
 </div>
 </div>
@@ -591,9 +590,9 @@ packages).</p>
 
 julia&gt;</code></pre>
 <p>This is the so-called REPL, which stands for
-<strong>r</strong>ead-<strong>e</strong>valuate-<strong>p</strong>rint-<strong>l</strong>oop.
-The interactive command-line REPL allows quick and easy execution of
-Julia statements.</p>
+<strong>r</strong>ead-<strong>e</strong>valuate-<strong>p</strong>rint
+<strong>l</strong>oop. The interactive command-line REPL allows quick
+and easy execution of Julia statements.</p>
 <p>Like the terminal, the Julia REPL has a prompt, where it awaits
 input:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -632,7 +631,7 @@ each line of input.</p>
 VSCodium. VSC is a source code editor for which a <code>julia</code>
 extension is available. After installing the application, simply click
 on the <kbd>“Extension”</kbd> symbol on the left side and search for
-<code>julia</code>. Once installt <code>julia</code> remains usable and
+<code>julia</code>. Once installed <code>julia</code> remains usable and
 can be selected as a programming language in new documents.</p>
 <p>For further guidance and visual aid, check out the provided <a href="https://av.tib.eu/media/62060" class="external-link">video</a>!</p>
 </div>
@@ -678,15 +677,13 @@ check which variables are defined in the current session by running</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code> name                    size summary
- –––––––––––––––– ––––––––––– –––––––
- Base                         Module
- Core                         Module
- InteractiveUtils 270.164 KiB Module
- Main                         Module
- ans                  8 bytes Float64
- distance             8 bytes Float64
- distance_x_2         8 bytes Float64</code></pre>
+<pre class="output" tabindex="0"><code>  name            size summary
+  –––––––––––– ––––––– –––––––
+  Base                 Module
+  Core                 Module
+  Main                 Module
+  distance     8 bytes Float64
+  distance_x_2 8 bytes Float64</code></pre>
 </div>
 <div class="section level3">
 <h3 id="unicode">Unicode<a class="anchor" aria-label="anchor" href="#unicode"></a>
@@ -697,21 +694,37 @@ followed by their <a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symb
 name</a> and then pressing <kbd>tab</kbd> (in this case
 <code>\alpha</code><kbd>tab</kbd>).</p>
 </div>
-</section><section><h2 class="section-heading" id="repl-modes">REPL-modes<a class="anchor" aria-label="anchor" href="#repl-modes"></a>
-</h2>
-<hr class="half-width">
-<p>Unfortunately Melissa can’t remember the LaTeX name of ∂ so she
-copies the character , presses <kbd>?</kbd> for help mode,</p>
+<div class="section level3">
+<h3 id="exiting-the-repl">Exiting the REPL<a class="anchor" aria-label="anchor" href="#exiting-the-repl"></a>
+</h3>
+<p>To exit the Julia REPL and return to the terminal shell, you can use
+the <code>exit</code> function:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>?</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">exit</span>()</span></code></pre>
 </div>
-<p>pastes the ∂ character, then presses enter:</p>
+<p>Or you can press Ctrl-D (the <code>Ctrl</code> key and the
+<code>D</code> key together).</p>
+</div>
+</section><section><h2 class="section-heading" id="repl-modes">REPL Modes<a class="anchor" aria-label="anchor" href="#repl-modes"></a>
+</h2>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="help-mode">Help Mode<a class="anchor" aria-label="anchor" href="#help-mode"></a>
+</h3>
+<p>Unfortunately Melissa can’t remember the LaTeX name of ∂ so she
+copies the character , presses <kbd>?</kbd> for help mode,</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>help?<span class="op">&gt;</span> ∂</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>?</span></code></pre>
+</div>
+<p>pastes the ∂ character, then presses enter:</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>help?<span class="op">&gt;</span> ∂</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -743,21 +756,25 @@ functions. Use Julia’s help mode to read the documentation for the
 <div class="accordion-body">
 <p>If you are not already in help mode, type <code>?</code> to enter it.
 Then write <code>varinfo</code> and press enter.</p>
-<div class="codewrapper sourceCode" id="cb13">
-<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>?varinfo</span></code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>Another useful mode is the <em>shell mode</em> that can be entered by
-pressing <kbd>;</kbd>. The prompt has now changed:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>shell<span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>?varinfo</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="shell-mode">Shell Mode<a class="anchor" aria-label="anchor" href="#shell-mode"></a>
+</h3>
+<p>Another useful mode is the <em>shell mode</em> that can be entered by
+pressing <kbd>;</kbd>. The prompt has now changed:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>shell<span class="op">&gt;</span></span></code></pre>
 </div>
 <p>Shell mode can be used to issue commands to the underlying shell, but
 don’t confuse it with an actual shell: special shell syntax like piping
@@ -794,20 +811,20 @@ before? Why or why not?</li>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb15">
-<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>shell<span class="op">&gt;</span> pwd</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>shell<span class="op">&gt;</span> cd</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>shell<span class="op">&gt;</span> pwd</span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>shell<span class="op">&gt;</span> pwd</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>shell<span class="op">&gt;</span> cd</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb18">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>shell<span class="op">&gt;</span> pwd</span></code></pre>
 </div>
 <p>The working directory is the location from which you launched Julia.
 To navigate to a different directory, you can use the <code>cd</code>
@@ -844,15 +861,15 @@ files</em>). Use it to show the contents of your home directory.</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb18">
-<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>shell<span class="op">&gt;</span> cd</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>shell<span class="op">&gt;</span> ls</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>shell<span class="op">&gt;</span> cd</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb20">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>shell<span class="op">&gt;</span> ls</span></code></pre>
 </div>
 <p>The first <code>cd</code> command will bring you to your home
 directory. <code>ls</code> will print a list of the files and directorys
@@ -885,26 +902,26 @@ then run the program using <code>julia hello.jl</code>.</p>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb20">
-<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>;</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>shell<span class="op">&gt;</span> nano hello.jl</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>shell<span class="op">&gt;</span> cat hello.jl</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>;</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>shell<span class="op">&gt;</span> nano hello.jl</span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a>shell<span class="op">&gt;</span> cat hello.jl</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fu">print</span><span class="op">(</span><span class="st">"Hello World!"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb23">
+<div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>shell<span class="op">&gt;</span> julia hello.jl</span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>shell<span class="op">&gt;</span> julia hello.jl</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -916,21 +933,97 @@ then run the program using <code>julia hello.jl</code>.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="pkg-mode">Pkg Mode<a class="anchor" aria-label="anchor" href="#pkg-mode"></a>
+</h3>
 <p>Finally there is <em>package mode</em> that is entered with
 <kbd>]</kbd> which is used for package management, which will be covered
 later on:</p>
-<div class="codewrapper sourceCode" id="cb25">
-<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>]</span></code></pre>
-</div>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>pkg<span class="op">&gt;</span></span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>]</span></code></pre>
 </div>
-<p>To exit <em>shell</em>, <em>help</em> or <em>pkg</em> mode, hit
-<kbd>backspace</kbd>.</p>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a>pkg<span class="op">&gt;</span></span></code></pre>
+</div>
+<p>Again, press <kbd>backspace</kbd> to return to the Julia REPL.</p>
+</div>
+</section><section><h2 class="section-heading" id="include">
+<code>include</code><a class="anchor" aria-label="anchor" href="#include"></a>
+</h2>
+<hr class="half-width">
+<p>The <code>include</code> function executes the code from a file in
+the current context. Let’s modify the previous challenge to illustrate
+this.</p>
+<div id="challenge5" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Edit the file <code>hello.jl</code> to print the value of a variable
+<code>x</code> with <code>print("Hello, ", x)</code> (use
+<code>?print</code> if you’re curious). Define <code>x</code> in the
+REPL and include <code>hello.jl</code> to use the variable.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb28">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>;</span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb29">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>shell<span class="op">&gt;</span> nano hello.jl</span></code></pre>
+</div>
+<p>Type <code>print("Hello, ", x)</code>, then save and close the
+file.</p>
+<p>Press <kbd>backspace</kbd> to return to the REPL.</p>
+<div class="codewrapper sourceCode" id="cb30">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>x <span class="op">=</span> <span class="st">"REPL"</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="st">"REPL"</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb32">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="fu">include</span>(<span class="st">"hello.jl"</span>)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Hello, REPL</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Before we move on let’s delete the file we created:</p>
+<div class="codewrapper sourceCode" id="cb34">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>;rm hello.jl</span></code></pre>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -939,18 +1032,30 @@ later on:</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul>
-<li>The REPL reads the given input, evaluates the given expression and
-prints the resulting output to the user.</li>
+<li>The REPL will
+<ul>
+<li>
+<strong>R</strong>ead the given input</li>
+<li>
+<strong>E</strong>valuate the given expression</li>
+<li>
+<strong>P</strong>rint the result to the user</li>
+<li>
+<strong>L</strong>oop back to the prompt again</li>
+</ul>
+</li>
 <li>Pressing <kbd>?</kbd> enters help mode.</li>
 <li>Pressing <kbd>;</kbd> enters shell mode.</li>
 <li>Pressing <kbd>]</kbd> enters pkg mode.</li>
+<li>To exit <em>shell</em>, <em>help</em> or <em>pkg</em> mode, hit
+<kbd>backspace</kbd>.</li>
 </ul>
 </div>
 </div>
 </div>
 </section></section><section id="aio-01_03_Julia_type_system"><p>Content from <a href="01_03_Julia_type_system.html">The Julia Type System</a></p>
 <hr>
-<p>Last updated on 2025-08-26 |
+<p>Last updated on 2025-08-29 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_03_Julia_type_system.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -965,8 +1070,8 @@ prints the resulting output to the user.</li>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>“What is the use of types?”</li>
-<li>“How are types organized in Julia?”</li>
+<li>What is the use of types?</li>
+<li>How are types organized in Julia?</li>
 </ul>
 </div>
 </div>
@@ -976,9 +1081,9 @@ prints the resulting output to the user.</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>“Understand the structure of the type tree.”</li>
-<li>“Know how to traverse the type tree.”</li>
-<li>“Know how to build mutable and immutable types.”</li>
+<li>Understand the structure of the type tree.</li>
+<li>Know how to traverse the type tree.</li>
+<li>Know how to build mutable and immutable types.</li>
 </ul>
 </div>
 </div>
@@ -994,12 +1099,17 @@ the variables coming from the environment (<code>wind</code>,
 <code>target_distance</code>). That is why she chooses to group them
 together using <em>structures</em>. There are two structure types:</p>
 <ul>
-<li>immutable structures, whose fields can not be changed after
-creation</li>
+<li>immutable structures, whose fields can not be changed after creation
+<ul>
 <li>keyword: <code>struct</code>
 </li>
-<li>mutable structures, whose fields can change after creation</li>
+</ul>
+</li>
+<li>mutable structures, whose fields can change after creation
+<ul>
 <li>keyword: <code>mutable struct</code>
+</li>
+</ul>
 </li>
 </ul>
 <p>Since Melissa wants to change the parameters of the trebuchet, she
@@ -1157,7 +1267,7 @@ return <code>false</code>?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The correct answer is 4: while <code>1</code> is an integer,
 <code>1.0</code> is a floating-point value.</p>
@@ -1183,7 +1293,7 @@ many arguments as there are fields.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fu">Trebuchet</span><span class="op">(</span><span class="fl">500.0</span>, <span class="fl">0.7853981633974483</span><span class="op">)</span></span></code></pre>
 </div>
-<p>Note, how the values will get converted to the specified field
+<p>Note how the values will get converted to the specified field
 type.</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1195,10 +1305,74 @@ type.</p>
 </h3>
 <pre class="output" tabindex="0"><code><span><span class="fu">Environment</span><span class="op">(</span><span class="fl">5.0</span>, <span class="fl">100.0</span><span class="op">)</span></span></code></pre>
 </div>
-<p><code>trebuchet</code> is being called an <em>instance</em> or
+<p><code>trebuchet</code> is called an <em>instance</em> or
 <em>object</em> of the type <code>Trebuchet</code>. There can only ever
 be one definition of the type <code>Trebuchet</code> but you can create
 many instances of that type with different values for its fields.</p>
+</section><section><h2 class="section-heading" id="a-little-more-about-types">A Little More about Types<a class="anchor" aria-label="anchor" href="#a-little-more-about-types"></a>
+</h2>
+<hr class="half-width">
+<p>Let’s look at an example of a parametric type:
+<code>Vector{T}</code>. The braces indicate the parameter(s). The name
+<code>Vector</code> without the parameter is a special type of abstract
+type called a <code>UnionAll</code>. That’s because the parameter is
+needed to specify a concrete type.</p>
+<div class="codewrapper sourceCode" id="cb21">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dt">Vector</span>)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">UnionAll</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb23">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dt">Vector</span>{<span class="dt">Float64</span>})</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">DataType</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb25">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">supertypes</span>(<span class="dt">Vector</span>)</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>(Vector, DenseVector, AbstractVector, Any)</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">supertypes</span>(<span class="dt">Vector</span>{<span class="dt">Float64</span>})</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>(Vector{Float64}, DenseVector{Float64}, AbstractVector{Float64}, Any)</code></pre>
+</div>
+<div id="type-constraints" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="type-constraints" class="callout-inner">
+<h3 class="callout-title">Type constraints</h3>
+<div class="callout-content">
+<p>You can see two “dimensions” of abstraction here. Remember abstract
+types represent “groups” of types that are intuitively similar. This is
+useful when defining structures or functions that need to be generic.
+When you need your function to apply to a group of possible input types,
+you simply think in terms of how tight the constraint needs to be.</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="creating-a-subtype">Creating a subtype<a class="anchor" aria-label="anchor" href="#creating-a-subtype"></a>
 </h2>
 <hr class="half-width">
@@ -1215,18 +1389,18 @@ thinks it is a good idea to make it a subtype of
 <div id="caveat-redefining-structs" class="callout-inner">
 <h3 class="callout-title">Caveat: Redefining Structs</h3>
 <div class="callout-content">
-<div class="codewrapper sourceCode" id="cb21">
+<div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="kw">mutable struct</span> Trebuchet <span class="op">&lt;:</span><span class="dt"> AbstractVector{Float64}</span></span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>  counterweight<span class="op">::</span><span class="dt">Float64</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>  release_angle<span class="op">::</span><span class="dt">Float64</span></span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="kw">end</span></span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="kw">mutable struct</span> Trebuchet <span class="op">&lt;:</span><span class="dt"> AbstractVector{Float64}</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>  counterweight<span class="op">::</span><span class="dt">Float64</span></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a>  release_angle<span class="op">::</span><span class="dt">Float64</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="kw">end</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="error" tabindex="0"><code>ERROR: invalid redefinition of constant Trebuchet
+<pre class="error" tabindex="0"><code>ERROR: invalid redefinition of constant Main.Trebuchet
 Stacktrace:
 [1] top-level scope
    @ REPL[9]:1</code></pre>
@@ -1241,7 +1415,7 @@ Stacktrace:
 <div id="restart-the-repl" class="callout-inner">
 <h3 class="callout-title">Restart the REPL</h3>
 <div class="callout-content">
-<p>In Julia it is not very easy to redefine <code>struct</code>s. It is
+<p>In Julia it is not very easy to redefine a <code>struct</code>. It is
 necessary to restart the REPL to define the new definition of
 <code>Trebuchet</code>, or take a different name instead.</p>
 </div>
@@ -1267,7 +1441,7 @@ later.</em></p>
 </div>
 </section></section><section id="aio-01_04_Using_the_package_manager"><p>Content from <a href="01_04_Using_the_package_manager.html">Using the Package Manager</a></p>
 <hr>
-<p>Last updated on 2025-08-26 |
+<p>Last updated on 2025-08-29 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/01_04_Using_the_package_manager.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1282,9 +1456,9 @@ later.</em></p>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>“Where do I find packages?”</li>
-<li>“How do I add packages?”</li>
-<li>“How can I use packages?”</li>
+<li>Where do I find packages?</li>
+<li>How do I add packages?</li>
+<li>How can I use packages?</li>
 </ul>
 </div>
 </div>
@@ -1294,9 +1468,9 @@ later.</em></p>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>“Learn to add packages using pkg-mode”</li>
-<li>“Learn to resolve name conflicts”</li>
-<li>“Learn to activate environments”</li>
+<li>Learn to add packages using pkg-mode</li>
+<li>Learn to resolve name conflicts</li>
+<li>Learn to activate environments</li>
 </ul>
 </div>
 </div>
@@ -1362,7 +1536,7 @@ uses the <code>activate</code> function of the package manager:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="output" tabindex="0"><code>  Activating project at `~/projects/trebuchet`</code></pre>
+<pre class="output" tabindex="0"><code>  Activating new project at `~/projects/trebuchet`</code></pre>
 </div>
 <p>In this environment she adds the <code>Trebuchet</code> package from
 its open source code <a href="https://github.com/FluxML/Trebuchet.jl" class="external-link">repository on GitHub</a>
@@ -1405,8 +1579,6 @@ her environment.</p>
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="output" tabindex="0"><code>Status `~/projects/trebuchet/Project.toml`
-  [f6369f11] ForwardDiff v0.10.38
-  [295af30f] Revise v3.6.3
   [98b73d46] Trebuchet v0.2.2
 </code></pre>
 </div>
@@ -1553,9 +1725,9 @@ upon <code>import</code> using the keyword <em><code>as</code></em>:</p>
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/instructor/aio.html",
   "identifier": "https://ornl-training.github.io/julia-intro/instructor/aio.html",
-  "dateCreated": "2025-08-26",
-  "dateModified": "2025-08-26",
-  "datePublished": "2025-08-26"
+  "dateCreated": "2025-08-29",
+  "dateModified": "2025-08-29",
+  "datePublished": "2025-08-29"
 }
 
   </script><script>
