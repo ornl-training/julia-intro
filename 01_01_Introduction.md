@@ -8,8 +8,8 @@ exercises: 0
 
 ## Questions
 
-  - "What is Julia?"
-  - "Why use Julia?"
+  - What is Julia?
+  - Why use Julia?
 
 ::::::
 
@@ -17,46 +17,64 @@ exercises: 0
 
 ## Objectives
 
-  - "Explain the difference between interpreted and compiled programming languages"
-  - "Compare how composing works in Julia and some common programming languages"
+  - Explain the difference between interpreted and compiled programming languages
+  - Compare how composing works in Julia and some common programming languages
 
 ::::::
 
 ## What is a programming language?
 
 A programming language mediates between the natural language of humans and the
-machine instructions of a computer.
-The human specifies what the computer should compute on a high level using the
-programming language.
-This specification will be translated to machine instructions, the so called
-assembly code, which will be executed by the processor (CPU, GPU, ...).
+machine instructions of a computer.  The human specifies what the computer
+should compute on a high level using the programming language.  This
+specification will be translated to machine instructions, the so called assembly
+code, which will be executed by the processor (CPU, GPU, ...).
 
 ### Interpreting and compiling
 
 This translation happens differently depending on the programming language you
-use.
-There are mainly two different techniques: *compiling* and *interpreting*.
-Interpreted languages such as Python and R translate instructions one at a
-time, while compiled languages like C and Fortran take whole documents, analyze
-the structure of the code, and perform optimizations before translating it to
+use.  There are mainly two different techniques: *compiling* and *interpreting*.
+Interpreted languages such as Python and R translate instructions one at a time,
+while compiled languages like C and Fortran take whole documents, analyze the
+structure of the code, and perform optimizations before translating it to
 machine code.
 
 This leads to more efficient machine instructions of the compiled code at the
-cost of less flexibility and more verbose code.
-Most prominently, compiled languages need an explicit type declaration for each
-variable.
+cost of less flexibility and more verbose code. Most prominently, compiled
+languages need an explicit type declaration for each variable.
 
 ## Why Julia?
 
 ### Just-in-Time (JIT) Compilation
 
 Julia is a programming language that superficially looks like an interpreted
-language and mostly behaves like one.  But before each function is executed it
+language and mostly behaves like one. But before each function is executed it
 will be compiled *just in time*.
 
 Thus you get the flexibility of an interpreted language and the execution speed
 of a compiled language at the cost of waiting a bit longer for the first
 execution of any function.
+
+### Built-in Engineering
+
+Julia has software engineering features integrated into the language.
+
+- dependency management
+- packaging
+- documentation
+- testing
+- profiling
+
+### Designed for Scientists
+
+Julia includes many tools commonly used in scientific computing.
+
+- multi-dimensional arrays
+- linear algebra (including sparse arrays)
+- random numbers
+- statistics
+
+(and, of course, many other things through easily-accessible packages).
 
 ### Package Composition
 
@@ -100,33 +118,11 @@ Urmy](https://github.com/ElOceanografo):
 
 Originally posted on [Discourse](https://discourse.julialang.org/t/what-is-the-advantage-of-julia-over-fortran/65964/101).
 
-### Built-in Engineering
-
-Julia has software engineering features integrated into the language.
-
-- Dependency management
-- Packaging
-- Documentation
-- Testing
-- Profiling
-
-### Designed for Scientists
-
-Julia includes "out-of-the-box" many tools commonly used in scientific
-computing, like
-
-- multi-dimensional arrays
-- linear algebra (including sparse arrays)
-- random numbers
-- statistics
-
-(and, of course, many other things through easily-accessible packages).
-
 :::::: keypoints
 
   - Julia is a just-in-time compiled language
   - Julia packages compose well
-  - Designed for science with engineering baked in
+  - Designed for science and engineering
 
 ::::::
 
