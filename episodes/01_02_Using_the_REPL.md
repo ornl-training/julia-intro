@@ -1,14 +1,14 @@
 ---
 title: "Using the REPL"
-teaching: 18
-exercises: 2
+teaching: 20
+exercises: 5
 ---
 
 :::::: questions
 
 ## Questions
 
-  - "How to use the REPL?"
+  - How to use the REPL?
 
 ::::::
 
@@ -16,9 +16,9 @@ exercises: 2
 
 ## Objectives
 
-  - "Explore basic functionality of input."
-  - "Learn how to declare variables."
-  - "Learn about REPL modes."
+  - Explore basic functionality of input.
+  - Learn how to declare variables.
+  - Learn about REPL modes.
 
 ::::::
 
@@ -43,7 +43,7 @@ julia>
 ```
 
 This is the so-called REPL, which stands for
-**r**ead-**e**valuate-**p**rint-**l**oop. The interactive command-line REPL
+**r**ead-**e**valuate-**p**rint **l**oop. The interactive command-line REPL
 allows quick and easy execution of Julia statements.
 
 Like the terminal, the Julia REPL has a prompt, where it awaits input:
@@ -71,9 +71,9 @@ assume that any **Julia** box prepends the prompt on each line of input.
 
 An alternative to using the REPL through a terminal is to work with
 <b>V</b>isual <b>S</b>tudio <b>C</b>ode or its open source altenative VSCodium.
-VSC is a source code editor for which a `julia` extension is available.  After
+VSC is a source code editor for which a `julia` extension is available. After
 installing the application, simply click on the <kbd>"Extension"</kbd> symbol on
-the left side and search for `julia`.  Once installt `julia` remains usable and
+the left side and search for `julia`. Once installed `julia` remains usable and
 can be selected as a programming language in new documents.
 
 For further guidance and visual aid, check out the provided
@@ -116,15 +116,13 @@ varinfo()
 ```
 
 ```output
- name                    size summary
- –––––––––––––––– ––––––––––– –––––––
- Base                         Module
- Core                         Module
- InteractiveUtils 270.164 KiB Module
- Main                         Module
- ans                  8 bytes Float64
- distance             8 bytes Float64
- distance_x_2         8 bytes Float64
+  name            size summary
+  –––––––––––– ––––––– –––––––
+  Base                 Module 
+  Core                 Module 
+  Main                 Module 
+  distance     8 bytes Float64
+  distance_x_2 8 bytes Float64
 ```
 
 ### Unicode
@@ -134,7 +132,20 @@ Unicode characters can be entered by a backslash followed by their [LaTeX
 name](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) and then pressing <kbd>tab</kbd> (in this case
 `\alpha`<kbd>tab</kbd>).
 
-## REPL-modes
+### Exiting the REPL
+
+To exit the Julia REPL and return to the terminal shell, you can use the `exit`
+function:
+
+```julia
+exit()
+```
+
+Or you can press Ctrl-D (the `Ctrl` key and the `D` key together).
+
+## REPL Modes
+
+### Help Mode
 
 Unfortunately Melissa can't remember the LaTeX name of ∂ so she copies the character
 , presses <kbd>?</kbd> for help mode,
@@ -176,6 +187,8 @@ If you are not already in help mode, type `?` to enter it. Then write `varinfo` 
 ::::::
 
 ::::::
+
+### Shell Mode
 
 Another useful mode is the *shell mode* that can be
 entered by pressing <kbd>;</kbd>. The prompt has now changed:
@@ -295,6 +308,8 @@ Hello World!
 
 ::::::
 
+### Pkg Mode
+
 Finally there is *package mode* that is entered with <kbd>]</kbd> which is
 used for package management, which will be covered later on:
 
@@ -305,16 +320,71 @@ used for package management, which will be covered later on:
 ```julia
 pkg>
 ```
+Again, press <kbd>backspace</kbd> to return to the Julia REPL.
 
-To exit *shell*, *help* or *pkg* mode, hit <kbd>backspace</kbd>.
+## `include`
+
+The `include` function executes the code from a file in the current context.
+Let's modify the previous challenge to illustrate this.
+
+::::: challenge
+
+Edit the file `hello.jl` to print the value of a variable `x` with
+`print("Hello, ", x)` (use `?print` if you're curious). Define `x` in the REPL
+and include `hello.jl` to use the variable.
+
+::::: solution
+
+## Solution
+
+```julia
+;
+```
+
+```julia
+shell> nano hello.jl
+```
+Type `print("Hello, ", x)`, then save and close the file.
+
+Press <kbd>backspace</kbd> to return to the REPL.
+
+```julia
+x = "REPL"
+```
+
+```output
+"REPL"
+```
+
+```julia
+include("hello.jl")
+```
+
+```output
+Hello, REPL
+```
+
+:::::
+
+:::::
+
+Before we move on let's delete the file we created:
+
+```julia
+;rm hello.jl
+```
 
 :::::: keypoints
 
-  - The REPL reads the given input, evaluates the given expression and prints
-    the resulting output to the user.
+  - The REPL will
+    - **R**ead the given input
+    - **E**valuate the given expression
+    - **P**rint the result to the user
+    - **L**oop back to the prompt again
   - Pressing <kbd>?</kbd> enters help mode.
   - Pressing <kbd>;</kbd> enters shell mode.
   - Pressing <kbd>]</kbd> enters pkg mode.
+  - To exit *shell*, *help* or *pkg* mode, hit <kbd>backspace</kbd>.
 
 ::::::
 

@@ -8,7 +8,7 @@ site: sandpaper::sandpaper_site
 </p>
 
 Melissa and her schoolmates built a trebuchet in their physics club.  In their
-first tests they experienced that aiming it is not that easy and intuitive, so
+first tests they experienced that aiming it is not very easy or intuitive, so
 they are planning to write a program that automatically aims their trebuchet
 given the distance of the target and the velocity of the wind.
 

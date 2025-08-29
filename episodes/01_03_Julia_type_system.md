@@ -8,8 +8,8 @@ exercises: 5
 
 ## Questions
 
-  - "What is the use of types?"
-  - "How are types organized in Julia?"
+  - What is the use of types?
+  - How are types organized in Julia?
 
 ::::::
 
@@ -17,9 +17,9 @@ exercises: 5
 
 ## Objectives
 
-  - "Understand the structure of the type tree."
-  - "Know how to traverse the type tree."
-  - "Know how to build mutable and immutable types."
+  - Understand the structure of the type tree.
+  - Know how to traverse the type tree.
+  - Know how to build mutable and immutable types.
 
 ::::::
 
@@ -33,9 +33,9 @@ That is why she chooses to group them together using _structures_.
 There are two structure types:
 
 - immutable structures, whose fields can not be changed after creation
- - keyword: `struct`
+  - keyword: `struct`
 - mutable structures, whose fields can change after creation
- - keyword: `mutable struct`
+  - keyword: `mutable struct`
 
 Since Melissa wants to change the parameters of the trebuchet, she uses a
 `mutable struct` for it.
@@ -199,7 +199,7 @@ trebuchet = Trebuchet(500, 0.25pi)
 Trebuchet(500.0, 0.7853981633974483)
 ```
 
-Note, how the values will get converted to the specified field type.
+Note how the values will get converted to the specified field type.
 
 ```julia
 environment = Environment(5, 100)
@@ -209,9 +209,102 @@ environment = Environment(5, 100)
 Environment(5.0, 100.0)
 ```
 
-`trebuchet` is being called an _instance_ or _object_ of the type `Trebuchet`.
+`trebuchet` is called an _instance_ or _object_ of the type `Trebuchet`.
 There can only ever be one definition of the type `Trebuchet` but you can create
 many instances of that type with different values for its fields.
+
+Since the type `Trebuchet` was defined as a `mutable struct`, the
+instance `trebuchet` can be changed.
+
+```julia
+trebuchet.release_angle = 0.4pi
+```
+
+```output
+1.2566370614359172
+```
+
+```julia
+trebuchet
+```
+
+```output
+Trebuchet(500.0, 1.2566370614359172)
+```
+
+The instance `environment` cannot, however, since the type `Environment` is
+immutable.
+
+```julia
+environment.wind = 10.0
+```
+
+```error
+ERROR: setfield!: immutable struct of type Environment cannot be changed
+Stacktrace:
+[...]
+```
+
+## A Little More about Types
+
+Let's look at an example of a parametric type: `Vector{T}`. The braces indicate
+the parameter(s). The name `Vector` without the parameter is a special type of
+abstract type called a `UnionAll`. That's because the parameter is needed to
+specify a concrete type.
+
+```julia
+typeof(Vector)
+```
+
+```output
+UnionAll
+```
+
+```julia
+typeof(Vector{Float64})
+```
+
+```output
+DataType
+```
+
+```julia
+supertypes(Vector)
+```
+
+```output
+(Vector, DenseVector, AbstractVector, Any)
+```
+
+```julia
+supertypes(Vector{Float64})
+```
+
+```output
+(Vector{Float64}, DenseVector{Float64}, AbstractVector{Float64}, Any)
+```
+
+::::: callout
+
+## Type constraints
+
+You can see two "dimensions" of abstraction here, the hierarchy and the
+parameter. Remember abstract types represent "groups" of types that are
+intuitively similar. This is useful when defining structures or functions that
+need to be generic. When you need your function to apply to a group of possible
+input types, you simply think in terms of how tight the constraint needs to be.
+
+:::::
+
+::::: caution
+
+## Don't change a variable's type
+
+While a variable that is specified to be an abstract type can change types
+within that constraint, it is best to avoid changing the type of a local
+variable, especially in places that are performance-critical.
+
+:::::
 
 ## Creating a subtype
 
@@ -232,7 +325,7 @@ end
 ```
 
 ```error
-ERROR: invalid redefinition of constant Trebuchet
+ERROR: invalid redefinition of constant Main.Trebuchet
 Stacktrace:
 [1] top-level scope
    @ REPL[9]:1
@@ -245,9 +338,9 @@ using a name that's already in use.
 
 ## Restart the REPL
 
-In Julia it is not very easy to redefine `struct`s.
-It is necessary to restart the REPL to define the new definition of
-`Trebuchet`, or take a different name instead.
+In Julia it is not very easy to redefine a `struct`.  It is necessary to restart
+the REPL to define the new definition of `Trebuchet`, or take a different name
+instead.
 
 ::::::
 

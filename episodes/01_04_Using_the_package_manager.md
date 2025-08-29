@@ -8,9 +8,9 @@ exercises: 0
 
 ## Questions
 
-  - "Where do I find packages?"
-  - "How do I add packages?"
-  - "How can I use packages?"
+  - Where do I find packages?
+  - How do I add packages?
+  - How can I use packages?
 
 ::::::
 
@@ -18,9 +18,9 @@ exercises: 0
 
 ## Objectives
 
-  - "Learn to add packages using pkg-mode"
-  - "Learn to resolve name conflicts"
-  - "Learn to activate environments"
+  - Learn to add packages using pkg-mode
+  - Learn to resolve name conflicts
+  - Learn to activate environments
 
 ::::::
 
@@ -78,7 +78,7 @@ it will look like `(@v1.11)`.  To create a new environment she uses the
 
 
 ```output
-  Activating project at `~/projects/trebuchet`
+  Activating new project at `~/projects/trebuchet`
 ```
 
 In this environment she adds the `Trebuchet` package from its
@@ -120,8 +120,6 @@ environment.
 
 ```output
 Status `~/projects/trebuchet/Project.toml`
-  [f6369f11] ForwardDiff v0.10.38
-  [295af30f] Revise v3.6.3
   [98b73d46] Trebuchet v0.2.2
 
 ```
