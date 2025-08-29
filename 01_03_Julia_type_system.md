@@ -213,6 +213,38 @@ Environment(5.0, 100.0)
 There can only ever be one definition of the type `Trebuchet` but you can create
 many instances of that type with different values for its fields.
 
+Since the type `Trebuchet` was defined as a `mutable struct`, the
+instance `trebuchet` can be changed.
+
+```julia
+trebuchet.release_angle = 0.4pi
+```
+
+```output
+1.2566370614359172
+```
+
+```julia
+trebuchet
+```
+
+```output
+Trebuchet(500.0, 1.2566370614359172)
+```
+
+The instance `environment` cannot, however, since the type `Environment` is
+immutable.
+
+```julia
+environment.wind = 10.0
+```
+
+```error
+ERROR: setfield!: immutable struct of type Environment cannot be changed
+Stacktrace:
+[...]
+```
+
 ## A Little More about Types
 
 Let's look at an example of a parametric type: `Vector{T}`. The braces indicate
