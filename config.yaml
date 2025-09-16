@@ -71,6 +71,14 @@ episodes:
   - 01_02_Using_the_REPL.md
   - 01_03_Julia_type_system.md
   - 01_04_Using_the_package_manager.md
+  - 02_00_Programming_in_Julia.md
+  - 02_01_Functions.md
+  - 02_02_Interfaces_and_conditionals.md
+  - 02_03_Loops.md
+  - 03_00_Managing_Julia_Projects.md
+  - 03_01_Using_modules.md
+  - 03_02_Creating_packages.md
+  - 03_03_Adding_tests.md
 
 # Information for Learners
 learners: 
