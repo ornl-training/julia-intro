@@ -22,10 +22,34 @@
     <loc>https://ornl-training.github.io/julia-intro/01_Introduction.html</loc>
   </url>
   <url>
+    <loc>https://ornl-training.github.io/julia-intro/02_00_Programming_in_Julia.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/02_01_Functions.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/02_02_Interfaces_and_conditionals.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/02_03_Loops.html</loc>
+  </url>
+  <url>
     <loc>https://ornl-training.github.io/julia-intro/02_Getting_started.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/02_Using_the_REPL.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/03_00_Managing_Julia_Projects.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/03_01_Using_modules.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/03_02_Creating_packages.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/03_03_Adding_tests.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/03_Julia_type_system.html</loc>
@@ -73,10 +97,34 @@
     <loc>https://ornl-training.github.io/julia-intro/instructor/01_Introduction.html</loc>
   </url>
   <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/02_00_Programming_in_Julia.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/02_01_Functions.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/02_02_Interfaces_and_conditionals.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/02_03_Loops.html</loc>
+  </url>
+  <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/02_Getting_started.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/02_Using_the_REPL.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/03_00_Managing_Julia_Projects.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/03_01_Using_modules.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/03_02_Creating_packages.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/03_03_Adding_tests.html</loc>
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor/03_Julia_type_system.html</loc>
