@@ -59,27 +59,109 @@ which has the following structure:
 
 ## Make it a package
 
-Open your `Project.toml` and add `name = <your name>`, `uuid = <your uuid>`
-and optionally an `authors` field, each on a separate line.
+You can open your `Project.toml` and add `name = <your name>`, `uuid = <your
+uuid>` and optionally an `authors` field, each on a separate line.
 
 ::::::
 
+The basic `src` structure can be generated with a complete `Project.toml` using
+the `generate` command from `Pkg`. Melissa enters pkg mode using <kbd>]</kbd>.
 
-````
-  Generating  project MelissasPackage:
-    MelissasPackage/Project.toml
-    MelissasPackage/src/MelissasPackage.jl
+```julia
+(@v1.11) pkg> generate projects/MelissasModule
+```
 
-````
+```output
+  Generating  project MelissasModule:
+    projects/MelissasModule/Project.toml
+    projects/MelissasModule/src/MelissasModule.jl
+
+```
+
+Melissa's new package directory structure looks like this.
+
+```
+├── Project.toml
+└── src
+    └── MelissasModule.jl
+```
+
+She opens the newly generated `Project.toml` to see the contents (The `uuid` and
+`authors` fields will be unique to you:
+
+```
+name = "MelissasModule"
+uuid = "..."
+authors = ["..."]
+version = "0.1.0"
+```
+
+Melissa knows she needs the `Trebuchet` and `ForwardDiff` packages as
+dependencies. She activates her new project and adds them:
+
+```julia
+(@v1.11) pkg> activate projects/MelissasModule
+```
+
+```output
+  Activating project at `~/projects/MelissasModule`
+```
+
+```julia
+(MelissasModule) pkg> add Trebuchet ForwardDiff
+```
+
+```output
+   Resolving package versions...
+      Compat entries added for Trebuchet, ForwardDiff
+    Updating `~/projects/MelissasModule/Project.toml`
+  [f6369f11] + ForwardDiff v1.2.1
+  [98b73d46] + Trebuchet v0.2.2
+    Updating `~/projects/MelissasModule/Manifest.toml`
+  [...]
+```
+
+The `Project.toml` now has entries for those dependencies:
+
+```
+name = "MelissasModule"
+uuid = "..."
+authors = ["..."]
+version = "0.1.0"
+
+[deps]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+Trebuchet = "98b73d46-197d-11e9-11eb-69a6ff759d3a"
+
+[compat]
+ForwardDiff = "1.2.1"
+Trebuchet = "0.2.2"
+```
+
+The generated source file `src/MelissasModule.jl` looks like this:
+
+```julia
+module MelissasModule
+
+greet() = print("Hello World!")
+
+end # module MelissasModule
+```
+
+Melissa replaces the `greet()` function with the contents of her module she
+created earlier (except for the two lines using `Pkg`; there is no need to
+`activate` another project now that her module is part of a project with those
+dependencies).
 
 Now Melissa can use
 
 ```julia
-pkg> dev . # or path to package instead of `.`
+(@v1.11) pkg> dev . # or path to package instead of `.`
 ```
 
 instead of needing to `includet MelissasModule.jl`, and she can write
-`using MelissasModule` instead of `.using MelissasModule`.
+`using MelissasModule` instead of `using .MelissasModule`. She modifies
+`MelissasCode.jl` accordingly.
 
 ## Register a package
 

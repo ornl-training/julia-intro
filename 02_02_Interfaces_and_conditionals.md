@@ -28,25 +28,25 @@ Before starting to work in a new document, Melissa has to:
 
 1. Activate her environment
 
-````julia
+```julia
 using Pkg
 Pkg.activate(joinpath(@__DIR__, "projects", "trebuchet"))
 Pkg.instantiate()
-````
+```
 
-````output
+```output
   Activating project at `~/projects/trebuchet`
-````
+```
 
 2. Import the package under its modified name
 
-````julia
+```julia
 import Trebuchet as Trebuchets
-````
+```
 
 3. Define the structures
 
-````julia
+```julia
 mutable struct Trebuchet <: AbstractVector{Float64}
     counterweight::Float64
     release_angle::Float64
@@ -58,12 +58,12 @@ struct Environment
 end
 
 Base.size(::Trebuchet) = tuple(2)
-````
+```
 
 Now that Melissa knows that she has to add a method for
-````
+```
 getindex(trebuchet::Trebuchet, i::Int)
-````
+```
 she thinks about the implementation.
 
 If the index is `1` she wants to get the `counterweight` field and if the index
@@ -73,7 +73,7 @@ to specify conditions are `if`, `elseif` and `else`, closed with an `end`.
 
 Thus she writes
 
-````julia
+```julia
 function Base.getindex(trebuchet::Trebuchet, i::Int)
     if i === 1
         return trebuchet.counterweight
@@ -83,19 +83,19 @@ function Base.getindex(trebuchet::Trebuchet, i::Int)
         error("Trebuchet only accepts indices 1 and 2, yours is $i")
     end
 end
-````
+```
 
 And tries again:
 
-````julia
+```julia
 trebuchet = Trebuchet(500, 0.25pi)
-````
+```
 
-````output
+```output
 2-element Trebuchet:
   500.0
   0.7853981633974483
-````
+```
 
 Notice, that the printing is different from our `trebuchet` in [the former
 episode](01_03_Julia_type_system.md).
@@ -120,45 +120,46 @@ Now, that Melissa implemented the mandatory methods for this interface for the
 `AbstractArray`.  She tries a few things that now work without her writing
 explicit code for it:
 
-````julia
+```julia
 trebuchet + trebuchet
-````
+```
 
-````output
+```output
 2-element Vector{Float64}:
  1000.0
     1.5707963267948966
-````
+```
 
-````julia
+```julia
 using LinearAlgebra
 dot(trebuchet, trebuchet)
-````
+```
 
-````output
+```output
 250000.61685027508
-````
+```
 
-````julia
+```julia
 trebuchet * transpose(trebuchet)
-````
+```
 
-````output
+```output
 2×2 Matrix{Float64}:
  250000.0    392.699
     392.699    0.61685
-````
+```
 
 That is, it now behaves like you would expect from an ordinary matrix.
 
-Now she goes about implementing the missing optional method for `setindex!` of the `AbstractArray` interface.
+Now she goes about implementing the missing optional method for `setindex!` of
+the `AbstractArray` interface.
 
 :::::: challenge
 
 ## Implement `setindex!`
 
-Write the missing method for `setindex(trebuchet::Trebuchet, v, i::Int)` similar
-to Melissas `getindex` function.
+Write the missing method for `setindex!(trebuchet::Trebuchet, v, i::Int)`
+similar to Melissas `getindex` function.
 
 :::::: solution
 
@@ -166,8 +167,8 @@ to Melissas `getindex` function.
 
 ```julia
 function Base.setindex!(trebuchet::Trebuchet, v, i::Int)
-     if i === 1
-         trebuchet.counterweight = v
+    if i === 1
+        trebuchet.counterweight = v
     elseif i === 2
         trebuchet.release_angle = v
     else
@@ -184,23 +185,23 @@ end
 With the new `Trebuchet` defined with a complete `AbstractArray` interface,
 Melissa tries her new method to modify a counterweight by index:
 
-````julia
+```julia
 trebuchet[1] = 2
-````
+```
 
-````output
+```output
 2
-````
+```
 
-````julia
+```julia
 trebuchet
-````
+```
 
-````output
+```output
 2-element Trebuchet:
  2.0
  0.7853981633974483
-````
+```
 
 :::::: keypoints
 
