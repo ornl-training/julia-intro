@@ -163,7 +163,7 @@ environments.  That is useful for development time convenience packages like
 Melissa now returns to her project environment.
 
 ```julia
-(trebuchet) pkg> activate projects/trebuchet
+(@v1.11) pkg> activate projects/trebuchet
 ```
 
 ## Using and importing packages

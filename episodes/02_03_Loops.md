@@ -348,14 +348,13 @@ useful.  That's why she decides to change it a bit.  This time she uses a
 ```julia
 function aim(trebuchet, environment; ε = 0.1, η = 0.05)
     better_trebuchet = copy(trebuchet)
-    hit = x -> (shoot_distance([environment.wind, x[2], x[1]])
-                          - environment.target_distance)
-            while abs(hit(better_trebuchet)) > ε
-                grad = gradient(hit, better_trebuchet)
-                better_trebuchet -= η * grad
-            end
-            return Trebuchet(better_trebuchet[1], better_trebuchet[2])
-        end
+    hit = x -> (shoot_distance([environment.wind, x[2], x[1]]) - environment.target_distance)
+    while abs(hit(better_trebuchet)) > ε
+        grad = gradient(hit, better_trebuchet)
+        better_trebuchet -= η * grad
+    end
+    return Trebuchet(better_trebuchet[1], better_trebuchet[2])
+end
 
 better_trebuchet = aim(imprecise_trebuchet, environment);
 

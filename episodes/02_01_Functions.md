@@ -86,7 +86,7 @@ those that are not exported. What would the function call look like?
  2. `names(Trebuchets, all = true)` <!---correct-->
  3. `names(Trebuchets, all)`
  4. `names(Trebuchets; all = true)` <!---correct-->
- 5. Answer 2 and 4 <!---correct-->
+ 5. Both 2 and 4 <!---correct-->
 
 :::::: solution
 
@@ -220,7 +220,7 @@ Trebuchets.shoot(5, 0.25pi, 500)[2]
 114.88494815382731
 ```
 
-which means the shot traveled approximately 118 m.
+which means the shot traveled approximately 115 m.
 
 ### Defining functions
 
@@ -423,7 +423,7 @@ She can also lookup the docstring using the `@doc` macro
   See also: length, ndims, eachindex, sizeof.
 
   Examples
-  ≡≡≡≡≡≡≡≡≡≡
+  ≡≡≡≡≡≡≡≡
 
   julia> A = fill(1, (2,3,4));
   
@@ -437,25 +437,6 @@ She can also lookup the docstring using the `@doc` macro
 
   Return a tuple with the size of the buffer.
 
-  size(g, i)
-
-  Return the number of vertices in g if i=1 or i=2, or 1 otherwise.
-
-  Examples
-  ≡≡≡≡≡≡≡≡≡≡
-
-  julia> using Graphs
-  
-  julia> g = cycle_graph(4);
-  
-  julia> size(g, 1)
-  4
-  
-  julia> size(g, 2)
-  4
-  
-  julia> size(g, 3)
-  1
 ```
 
 With that information she can now implement this method:
@@ -508,7 +489,7 @@ She looks up the documentation for that function
   syntax Type[]. Element values can be specified using Type[a,b,c,...].
 
   Examples
-  ≡≡≡≡≡≡≡≡≡≡
+  ≡≡≡≡≡≡≡≡
 
   julia> Int8[1, 2, 3]
   3-element Vector{Int8}:
@@ -525,13 +506,12 @@ She looks up the documentation for that function
   getindex(collection, key...)
 
   Retrieve the value(s) stored at the given key or index within a collection.
-  The syntax a[i,j,...] is converted by the compiler to getindex(a, i, j,
-  ...).
+  The syntax a[i,j,...] is converted by the compiler to getindex(a, i, j, ...).
 
   See also get, keys, eachindex.
 
   Examples
-  ≡≡≡≡≡≡≡≡≡≡
+  ≡≡≡≡≡≡≡≡
 
   julia> A = Dict("a" => 1, "b" => 2)
   Dict{String, Int64} with 2 entries:
@@ -543,12 +523,21 @@ She looks up the documentation for that function
 
   getindex(A, inds...)
 
-  Return a subset of array A as specified by inds, where each ind may be, for
-  example, an Int, an AbstractRange, or a Vector. See the manual section on
-  array indexing for details.
+  Return a subset of array A as selected by the indices inds.
+
+  Each index may be any supported index type, such as an Integer,
+  CartesianIndex, range, or array of supported indices. A : may be used to
+  select all elements along a specific dimension, and a boolean array (e.g. an
+  Array{Bool} or a BitArray) may be used to filter for elements where the
+  corresponding index is true.
+
+  When inds selects multiple elements, this function returns a newly allocated
+  array. To index multiple elements without making a copy, use view instead.
+
+  See the manual section on array indexing for details.
 
   Examples
-  ≡≡≡≡≡≡≡≡≡≡
+  ≡≡≡≡≡≡≡≡
 
   julia> A = [1 2; 3 4]
   2×2 Matrix{Int64}:
@@ -568,14 +557,35 @@ She looks up the documentation for that function
    3
    2
    4
+  
+  julia> getindex(A, 2, 1)
+  3
+  
+  julia> getindex(A, CartesianIndex(2, 1))
+  3
+  
+  julia> getindex(A, :, 2)
+  2-element Vector{Int64}:
+   2
+   4
+  
+  julia> getindex(A, 2, :)
+  2-element Vector{Int64}:
+   3
+   4
+  
+  julia> getindex(A, A .> 2)
+  2-element Vector{Int64}:
+   3
+   4
 
   getindex(tree::GitTree, target::AbstractString) -> GitObject
 
-  Look up target path in the tree, returning a GitObject (a GitBlob in the
-  case of a file, or another GitTree if looking up a directory).
+  Look up target path in the tree, returning a GitObject (a GitBlob in the case
+  of a file, or another GitTree if looking up a directory).
 
   Examples
-  ≡≡≡≡≡≡≡≡≡≡
+  ≡≡≡≡≡≡≡≡
 
   tree = LibGit2.GitTree(repo, "HEAD^{tree}")
   readme = tree["README.md"]
@@ -594,13 +604,21 @@ She looks up the documentation for that function
 
   Returns a vector with all elements of array partition A.
 
+  getindex(
+      c::SciMLBase.AbstractClock,
+      idx
+  ) -> SciMLBase.IndexedClock
+  
+
+  Return a SciMLBase.IndexedClock representing the subset of the time points
+  that the clock ticked indicated by idx.
+
   v = sd[k]
 
   Argument sd is a SortedDict and k is a key. In an expression, this retrieves
-  the value (v) associated with the key (or KeyError if none). On the
-  left-hand side of an assignment, this assigns or reassigns the value
-  associated with the key. (For assigning and reassigning, see also insert!
-  below.) Time: O(c log n)
+  the value (v) associated with the key (or KeyError if none). On the left-hand
+  side of an assignment, this assigns or reassigns the value associated with the
+  key. (For assigning and reassigning, see also insert! below.) Time: O(c log n)
 
   cb[i]
 
@@ -612,13 +630,9 @@ She looks up the documentation for that function
 
   getindex(tree, ind)
 
-  Gets the key present at index ind of the tree. Indexing is done in
-  increasing order of key.
+  Gets the key present at index ind of the tree. Indexing is done in increasing
+  order of key.
 
-  g[iter]
-
-  Return the subgraph induced by iter. Equivalent to induced_subgraph(g,
-  iter)[1].
 ```
 
 Note that the documentation for all methods gets shown and Melissa needs to look
