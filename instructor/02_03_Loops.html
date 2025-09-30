@@ -382,7 +382,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Loops</h1>
-        <p>Last updated on 2025-09-17 |
+        <p>Last updated on 2025-09-30 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/02_03_Loops.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -609,7 +609,7 @@ change the parameters to make the largest difference.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The correct solution is 4: <kbd>]</kbd> to enter pkg mode, then</p>
 <div class="codewrapper sourceCode" id="cb12">
@@ -675,7 +675,7 @@ gradient, such that it still improves the distance?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Try a bunch of values! </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -759,7 +759,7 @@ to automate the additional iterations. She writes a new function
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>This is a highly non-linear system and thus very sensitive. The
 distances across different values for the counterweight and the release
@@ -796,18 +796,17 @@ she is sufficiently near her target.</p>
 </h3>
 <pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">aim</span>(trebuchet, environment; ε <span class="op">=</span> <span class="fl">0.1</span>, η <span class="op">=</span> <span class="fl">0.05</span>)</span>
 <span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>    better_trebuchet <span class="op">=</span> <span class="fu">copy</span>(trebuchet)</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>    hit <span class="op">=</span> x <span class="op">-&gt;</span> (<span class="fu">shoot_distance</span>([environment.wind, x[<span class="fl">2</span>], x[<span class="fl">1</span>]])</span>
-<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>                          <span class="op">-</span> environment.target_distance)</span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>            <span class="cf">while</span> <span class="fu">abs</span>(<span class="fu">hit</span>(better_trebuchet)) <span class="op">&gt;</span> ε</span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a>                grad <span class="op">=</span> <span class="fu">gradient</span>(hit, better_trebuchet)</span>
-<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>                better_trebuchet <span class="op">-=</span> η <span class="op">*</span> grad</span>
-<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a>            <span class="cf">end</span></span>
-<span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a>            <span class="cf">return</span> <span class="fu">Trebuchet</span>(better_trebuchet[<span class="fl">1</span>], better_trebuchet[<span class="fl">2</span>])</span>
-<span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a>        <span class="kw">end</span></span>
-<span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a></span>
-<span id="cb23-12"><a href="#cb23-12" tabindex="-1"></a>better_trebuchet <span class="op">=</span> <span class="fu">aim</span>(imprecise_trebuchet, environment);</span>
-<span id="cb23-13"><a href="#cb23-13" tabindex="-1"></a></span>
-<span id="cb23-14"><a href="#cb23-14" tabindex="-1"></a><span class="fu">shoot_distance</span>(better_trebuchet, environment)</span></code></pre>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>    hit <span class="op">=</span> x <span class="op">-&gt;</span> (<span class="fu">shoot_distance</span>([environment.wind, x[<span class="fl">2</span>], x[<span class="fl">1</span>]]) <span class="op">-</span> environment.target_distance)</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>    <span class="cf">while</span> <span class="fu">abs</span>(<span class="fu">hit</span>(better_trebuchet)) <span class="op">&gt;</span> ε</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>        grad <span class="op">=</span> <span class="fu">gradient</span>(hit, better_trebuchet)</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a>        better_trebuchet <span class="op">-=</span> η <span class="op">*</span> grad</span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">Trebuchet</span>(better_trebuchet[<span class="fl">1</span>], better_trebuchet[<span class="fl">2</span>])</span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a></span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a>better_trebuchet <span class="op">=</span> <span class="fu">aim</span>(imprecise_trebuchet, environment);</span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1"></a></span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1"></a><span class="fu">shoot_distance</span>(better_trebuchet, environment)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -889,8 +888,8 @@ an unknown number of iterations.</li>
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/instructor/02_03_Loops.html",
   "identifier": "https://ornl-training.github.io/julia-intro/instructor/02_03_Loops.html",
-  "dateCreated": "2025-09-17",
-  "dateModified": "2025-09-17",
+  "dateCreated": "2025-09-30",
+  "dateModified": "2025-09-30",
   "datePublished": "2025-09-30"
 }
 

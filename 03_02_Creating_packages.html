@@ -391,7 +391,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Creating Packages</h1>
-        <p>Last updated on 2025-09-17 |
+        <p>Last updated on 2025-09-30 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/03_02_Creating_packages.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -462,26 +462,109 @@ which has the following structure:</p>
 <div id="make-it-a-package" class="callout-inner">
 <h3 class="callout-title">Make it a package</h3>
 <div class="callout-content">
-<p>Open your <code>Project.toml</code> and add
+<p>You can open your <code>Project.toml</code> and add
 <code>name = &lt;your name&gt;</code>,
 <code>uuid = &lt;your uuid&gt;</code> and optionally an
 <code>authors</code> field, each on a separate line.</p>
 </div>
 </div>
 </div>
-<pre><code>  Generating  project MelissasPackage:
-    MelissasPackage/Project.toml
-    MelissasPackage/src/MelissasPackage.jl
-</code></pre>
-<p>Now Melissa can use</p>
-<div class="codewrapper sourceCode" id="cb3">
+<p>The basic <code>src</code> structure can be generated with a complete
+<code>Project.toml</code> using the <code>generate</code> command from
+<code>Pkg</code>. Melissa enters pkg mode using <kbd>]</kbd>.</p>
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>pkg<span class="op">&gt;</span> dev . <span class="co"># or path to package instead of `.`</span></span></code></pre>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>(<span class="pp">@v1</span><span class="fl">.11</span>) pkg<span class="op">&gt;</span> generate projects<span class="op">/</span>MelissasModule</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  Generating  project MelissasModule:
+    projects/MelissasModule/Project.toml
+    projects/MelissasModule/src/MelissasModule.jl
+</code></pre>
+</div>
+<p>Melissa’s new package directory structure looks like this.</p>
+<pre><code>├── Project.toml
+└── src
+    └── MelissasModule.jl</code></pre>
+<p>She opens the newly generated <code>Project.toml</code> to see the
+contents (The <code>uuid</code> and <code>authors</code> fields will be
+unique to you:</p>
+<pre><code>name = "MelissasModule"
+uuid = "..."
+authors = ["..."]
+version = "0.1.0"</code></pre>
+<p>Melissa knows she needs the <code>Trebuchet</code> and
+<code>ForwardDiff</code> packages as dependencies. She activates her new
+project and adds them:</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>(<span class="pp">@v1</span><span class="fl">.11</span>) pkg<span class="op">&gt;</span> activate projects<span class="op">/</span>MelissasModule</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>  Activating project at `~/projects/MelissasModule`</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>(MelissasModule) pkg<span class="op">&gt;</span> add Trebuchet ForwardDiff</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>   Resolving package versions...
+      Compat entries added for Trebuchet, ForwardDiff
+    Updating `~/projects/MelissasModule/Project.toml`
+  [f6369f11] + ForwardDiff v1.2.1
+  [98b73d46] + Trebuchet v0.2.2
+    Updating `~/projects/MelissasModule/Manifest.toml`
+  [...]</code></pre>
+</div>
+<p>The <code>Project.toml</code> now has entries for those
+dependencies:</p>
+<pre><code>name = "MelissasModule"
+uuid = "..."
+authors = ["..."]
+version = "0.1.0"
+
+[deps]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+Trebuchet = "98b73d46-197d-11e9-11eb-69a6ff759d3a"
+
+[compat]
+ForwardDiff = "1.2.1"
+Trebuchet = "0.2.2"</code></pre>
+<p>The generated source file <code>src/MelissasModule.jl</code> looks
+like this:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">module</span> MelissasModule</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">greet</span>() <span class="op">=</span> <span class="fu">print</span>(<span class="st">"Hello World!"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="kw">end</span> <span class="co"># module MelissasModule</span></span></code></pre>
+</div>
+<p>Melissa replaces the <code>greet()</code> function with the contents
+of her module she created earlier (except for the two lines using
+<code>Pkg</code>; there is no need to <code>activate</code> another
+project now that her module is part of a project with those
+dependencies).</p>
+<p>Now Melissa can use</p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>(<span class="pp">@v1</span><span class="fl">.11</span>) pkg<span class="op">&gt;</span> dev . <span class="co"># or path to package instead of `.`</span></span></code></pre>
 </div>
 <p>instead of needing to <code>includet MelissasModule.jl</code>, and
 she can write <code>using MelissasModule</code> instead of
-<code>.using MelissasModule</code>.</p>
+<code>using .MelissasModule</code>. She modifies
+<code>MelissasCode.jl</code> accordingly.</p>
 </section><section><h2 class="section-heading" id="register-a-package">Register a package<a class="anchor" aria-label="anchor" href="#register-a-package"></a></h2>
 <hr class="half-width"><p>In order for her friends to be able to get the package, Melissa
 registers the package in the <em>general registry</em>. This can be done
@@ -577,8 +660,8 @@ create a new package using <code>generate</code>.</p>
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/03_02_Creating_packages.html",
   "identifier": "https://ornl-training.github.io/julia-intro/03_02_Creating_packages.html",
-  "dateCreated": "2025-09-17",
-  "dateModified": "2025-09-17",
+  "dateCreated": "2025-09-30",
+  "dateModified": "2025-09-30",
   "datePublished": "2025-09-30"
 }
 

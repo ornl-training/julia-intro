@@ -389,7 +389,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Interfaces &amp; conditionals</h1>
-        <p>Last updated on 2025-09-17 |
+        <p>Last updated on 2025-09-30 |
 
         <a href="https://github.com/ornl-training/julia-intro/edit/main/episodes/02_02_Interfaces_and_conditionals.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -579,7 +579,7 @@ matrix.</p>
 </h3>
 <div class="callout-content">
 <p>Write the missing method for
-<code>setindex(trebuchet::Trebuchet, v, i::Int)</code> similar to
+<code>setindex!(trebuchet::Trebuchet, v, i::Int)</code> similar to
 Melissas <code>getindex</code> function.</p>
 </div>
 </div>
@@ -589,14 +589,14 @@ Melissas <code>getindex</code> function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">JULIA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode julia" tabindex="0"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="kw">function</span> <span class="bu">Base</span>.<span class="fu">setindex!</span>(trebuchet<span class="op">::</span><span class="dt">Trebuchet</span>, v, i<span class="op">::</span><span class="dt">Int</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>     <span class="cf">if</span> i <span class="op">===</span> <span class="fl">1</span></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>         trebuchet.counterweight <span class="op">=</span> v</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">===</span> <span class="fl">1</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>        trebuchet.counterweight <span class="op">=</span> v</span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    <span class="cf">elseif</span> i <span class="op">===</span> <span class="fl">2</span></span>
 <span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>        trebuchet.release_angle <span class="op">=</span> v</span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>    <span class="cf">else</span></span>
@@ -706,8 +706,8 @@ modify a counterweight by index:</p>
   "creativeWorkStatus": "active",
   "url": "https://ornl-training.github.io/julia-intro/instructor/02_02_Interfaces_and_conditionals.html",
   "identifier": "https://ornl-training.github.io/julia-intro/instructor/02_02_Interfaces_and_conditionals.html",
-  "dateCreated": "2025-09-17",
-  "dateModified": "2025-09-17",
+  "dateCreated": "2025-09-30",
+  "dateModified": "2025-09-30",
   "datePublished": "2025-09-30"
 }
 

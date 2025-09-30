@@ -166,6 +166,9 @@
     <loc>https://ornl-training.github.io/julia-intro/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://ornl-training.github.io/julia-intro/instructor/todo.html</loc>
+  </url>
+  <url>
     <loc>https://ornl-training.github.io/julia-intro/instructor-notes.html</loc>
   </url>
   <url>
@@ -179,5 +182,8 @@
   </url>
   <url>
     <loc>https://ornl-training.github.io/julia-intro/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://ornl-training.github.io/julia-intro/todo.html</loc>
   </url>
 </urlset>
